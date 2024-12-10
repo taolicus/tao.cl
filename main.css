@@ -9,7 +9,7 @@ html, body {
 
 body {
   color: #fff;
-  background-color: #202024;
+  background-color: #101014;
   /* background: linear-gradient(to bottom, #202020, #202020 75%, black 100%); */
   line-height: 1.6rem;
   text-align: center;
@@ -117,4 +117,10 @@ pre {
     border: none;
     /* background-color: #666; */
   }
+}
+
+hr {
+  border: none;
+  border-bottom: solid 1px #fff;
+  width: 100%;
 }
