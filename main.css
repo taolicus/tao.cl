@@ -83,6 +83,7 @@ pre {
 #tao {
   border-radius: 100%;
   max-width: 300px;
+  animation: spin 60s linear infinite;
 }
 
 #signature {
