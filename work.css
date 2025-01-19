@@ -1,0 +1,8 @@
+#work header {
+  display: block;
+  text-align: left;
+  min-height: fit-content;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
