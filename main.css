@@ -73,6 +73,8 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
   text-align: left;
+  line-height: 1rem;
+  color: #900;
 }
 
 @keyframes spin {
