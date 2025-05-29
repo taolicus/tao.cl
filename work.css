@@ -6,3 +6,7 @@
   margin: 0 auto;
   padding: 1rem;
 }
+
+a:has(> #signature):hover {
+  border: none;
+}
