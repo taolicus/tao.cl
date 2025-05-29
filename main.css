@@ -115,6 +115,16 @@ pre {
     margin: 0;
     margin-left: 1rem;
   }
+  .description {
+    order: 2;
+    margin: 0;
+    margin-left: 1rem;
+    text-align: start;
+    h2 {
+      margin-left: 0 !important;
+      text-align: start;
+    }
+  }
   img {
     max-width: 100%;
   }
