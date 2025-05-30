@@ -10,3 +10,47 @@
 a:has(> #signature):hover {
   border: none;
 }
+
+.project {
+  padding: 1rem 0;
+}
+.project a {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  h2 {
+    order: 2;
+    margin: 0;
+    margin-left: 1rem;
+  }
+  .description {
+    order: 2;
+    margin: 0;
+    margin-left: 1rem;
+    text-align: start;
+    h2 {
+      margin-left: 0 !important;
+      text-align: start;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+  @media (max-width: 600px) {
+    flex-direction: column;
+    h2 {
+      margin-top: 1rem;
+      margin-left: 0;
+    }
+    .description {
+      margin-left: 0;
+    }
+  }
+  &:hover {
+    border: none;
+    /* background-color: #666; */
+  }
+}
