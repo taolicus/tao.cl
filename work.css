@@ -70,6 +70,7 @@ a:has(> #signature):hover {
     }
     .description {
       margin-left: 0;
+      margin-top: 0.6rem;
     }
   }
   &:hover {
