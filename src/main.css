@@ -8,18 +8,12 @@ a {
   }
 }
 
-@keyframes turn {
-  to {
-    transform: rotate(-360deg);
-  }
-}
-
 #tao {
-  animation: turn 60s linear infinite;
+  animation: spin 60s linear infinite reverse;
 }
 
 #signature {
-  animation: turn 60s linear infinite;
+  animation: spin 60s linear infinite reverse;
 }
 
 hr {
