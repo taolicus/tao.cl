@@ -1,21 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="min-h-screen scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tao Zamorano • Full-Stack Web Developer</title>
-    <link rel="shortcut icon" href="img/tao.svg" />
-    <link rel="stylesheet" href="main.css" />
+    <link rel="shortcut icon" href="./src/img/tao.svg" />
+    <link rel="stylesheet" href="./src/main.css" />
+    <script src="./src/main.js" defer></script>
   </head>
 
-  <body>
-    <header>
-      <h1><img id="tao" src="img/tao.svg" alt="Tao" /></h1>
-      <h2>Oli! 👋</h2>
-      <h1>I'm Tao. A London based web worker from Santiago, Chile.</h1>
-      <h2>I do full-stack web development in JavaScript and PHP.</h2>
-      <h3>My tools of the trade include React, Laravel, Git and Linux.</h3>
-      <a href="/work">&gt; Check my work</a>
-    </header>
+  <body class="bg-black text-center font-extralight text-balance text-white">
+    <section
+      class="flex min-h-screen flex-col items-center justify-center gap-6 py-12"
+    >
+      <div class="flex justify-center overflow-clip">
+        <div class="max-w-[400px] p-4">
+          <h1>
+            <img id="tao" src="./src/img/tao.svg" alt="Tao" />
+          </h1>
+        </div>
+      </div>
+      <h2 class="text-6xl text-red-500">I'm Tao.</h2>
+      <h1 class="text-4xl">A London based web worker from Santiago, Chile.</h1>
+      <a href="#work">&gt; Check my work</a>
+    </section>
+
+    <main
+      id="work"
+      class="mx-auto flex max-w-[900px] flex-col gap-8 px-5 py-24 text-left"
+    >
+      <div class="project reveal">
+        <a
+          href="https://www.coca-cola.com/gb/en/offerings/share-a-coke/customisation/customisation"
+          target="_blank"
+        >
+          <div class="description">
+            <h2>Coca-Cola Share a Coke</h2>
+            <p class="year">M10c • 2025</p>
+            <p>
+              Interactive customisation platform for Coca-Cola's global "Share a
+              Coke" campaign, enabling users to personalise their Coke bottles
+              with custom names and messages.
+            </p>
+          </div>
+          <img src="./src/img/portfolio/sac.png" alt="Share a Coke" />
+        </a>
+      </div>
+      <div class="project reveal">
+        <a href="https://alltypes.archetype.co/" target="_blank">
+          <div class="description">
+            <h2>Archetype All Types</h2>
+            <p class="year">Archetype • 2023</p>
+            <p>
+              Dedicated diversity and inclusion platform showcasing Archetype's
+              commitment to workplace equity, featuring employee stories and
+              company initiatives.
+            </p>
+          </div>
+          <img src="./src/img/portfolio/alltypes.jpg" alt="All Types" />
+        </a>
+      </div>
+      <div class="project reveal">
+        <a href="https://www.nwew.co.uk/" target="_blank">
+          <div class="description">
+            <h2>National Women's Enterprise Week</h2>
+            <p class="year">Archetype • 2024</p>
+            <p>
+              Official website for UK's nationwide initiative supporting female
+              entrepreneurs, featuring event listings and media showcase section
+              highlighting press coverage and partnerships.
+            </p>
+          </div>
+          <img src="./src/img/portfolio/nwew.jpg" alt="NWEW" />
+        </a>
+      </div>
+      <div class="project reveal">
+        <a href="https://www.archetype.co/uk/digital/" target="_blank">
+          <div class="description">
+            <h2>Archetype UK Digital Team</h2>
+            <p class="year">Archetype • 2023</p>
+            <p>
+              Digital services showcase website for Archetype's specialist B2B
+              and SaaS marketing team, featuring client testimonials and service
+              portfolios.
+            </p>
+          </div>
+          <img
+            src="./src/img/portfolio/archetype-uk-digital.jpg"
+            alt="Archetype UK Digital"
+          />
+        </a>
+      </div>
+      <div class="project reveal">
+        <a href="https://dataflow.cl/" target="_blank">
+          <div class="description">
+            <h2>DataFlow</h2>
+            <p class="year">DataFlow • 2018</p>
+            <p>
+              Corporate website for a Chilean technology consultancy
+              specializing in IBM DataPower solutions and enterprise integration
+              services.
+            </p>
+          </div>
+          <img src="./src/img/portfolio/dataflow.jpg" alt="DataFlow" />
+        </a>
+      </div>
+    </main>
+
+    <footer class="flex flex-col items-center justify-center gap-4 py-6">
+      <p>
+        <a href="./src/tao-zamorano-resume-jun-2025.pdf" download>Resume</a> •
+        <a href="https://github.com/taolicus" target="_blank">Github</a> •
+        <a href="https://linkedin.com/in/taozamorano" target="_blank"
+          >Linkedin</a
+        >
+      </p>
+
+      <p>
+        <a href="#tao" title="Back to Home"
+          ><img id="signature" class="w-12" src="./src/img/tao.svg" alt="Tao"
+        /></a>
+      </p>
+    </footer>
   </body>
 </html>
