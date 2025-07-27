@@ -2,12 +2,7 @@ console.log("TAO.cl");
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry.intersectionRatio);
-
-    if (
-      entry.isIntersecting
-      // && entry.intersectionRatio > 0.2
-    ) {
+    if (entry.isIntersecting) {
       entry.target.classList.add("reveal-active");
     }
   });
