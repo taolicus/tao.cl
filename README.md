@@ -68,9 +68,8 @@ sh scripts/deploy.sh
 
 The script builds the site locally, runs `sh workflow/lint.sh`, pushes the
 current branch, then rsyncs only `dist/` to `/var/www/tao.cl` on the remote
-server. The repository itself does not need to live on the server; the script
-removes the old server-side clone and the obsolete remote deploy script after a
-successful deploy. It assumes an SSH host alias `tao` is configured locally.
+server. The repository itself does not need to live on the server. It assumes
+an SSH host alias `tao` is configured locally.
 
 `robots.txt` and `sitemap.xml` are copied from `public/` and assume the site is
 served from `https://tao.cl/`. The social image at `public/og.png` was rendered

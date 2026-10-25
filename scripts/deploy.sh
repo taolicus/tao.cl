@@ -14,6 +14,3 @@ git push
 
 # Deploy only the built static site.
 rsync -av --delete dist/ tao:/var/www/tao.cl/
-
-# Remove the old server-side repository clone and the obsolete remote script.
-ssh tao 'rm -rf ~/tao.cl ~/deploy-tao-cl.sh'
