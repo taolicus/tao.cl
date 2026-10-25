@@ -56,4 +56,35 @@ Baseline inspection found confirmed problems rather than hypothetical ones:
 
 ## Outcome
 
-Filled in when the task is closed.
+Completed the accessibility and resilience pass:
+
+- Reworked the document outline to one `h1`, `h2` sections and `h3` items,
+  with `header`, `nav`, `main` and `footer` landmarks and labelled sections.
+- Added a visible skip link that moves focus to `main`, plus a white
+  `:focus-visible` outline on every link. Tabbing through the skip link, hero,
+  navigation and project cards confirmed the outline on each.
+- Removed the JavaScript dependency from content visibility: `.reveal` now only
+  hides content when a `js` class is present, and the class is removed if the
+  module fails to load. Removing `js` showed every project at opacity 1.
+- Added `prefers-reduced-motion` handling for the logo spin, scroll behaviour and
+  reveal transitions. Verified in headless Chrome with
+  `--force-prefers-reduced-motion`: animation duration 0.01ms, one iteration,
+  reveal opacity 1, scroll behaviour `auto`.
+- Raised the year/meta text from `#666` to `#a3a3a3` (8.33:1 on black) and kept
+  all normal text above 4.5:1. Lighthouse accessibility reports 1.0.
+- Added intrinsic image dimensions, lazy loading and async decoding for
+  below-the-fold images.
+- Converted the five portfolio screenshots to WebP at display-appropriate
+  widths: 2.3 MB of JPEG/PNG became about 430 KB of WebP, with dimensions
+  updated. The 1 MB PNG is now an 82 KB WebP.
+- Added `rel="noopener"` and screen-reader new-tab text to every `_blank` link.
+- Added `robots.txt` and `sitemap.xml`; Lighthouse SEO rose from 0.67 to 1.0.
+- Trimmed the mobile hero so the primary call to action fits within a 375×812
+  viewport, and confirmed there is no horizontal overflow.
+
+Verified on the production preview (`vite preview`) as well as the dev server:
+Lighthouse accessibility 1.0, best practices 1.0, SEO 1.0 with no failures;
+`npm run build` and `sh workflow/lint.sh` pass. Visual screenshots were captured,
+but the reviewing model cannot read images, so visual confirmation remains a
+user check.
+
