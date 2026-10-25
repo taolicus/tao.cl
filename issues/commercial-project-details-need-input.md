@@ -18,6 +18,26 @@ products and Tao's team/role, not individual outcomes or metrics.
 
 One or two sentences of first-hand contribution detail per commercial project.
 
+## Notes from latest review (before job applications)
+
+No first-hand contribution evidence has been added yet. Specific gaps to fill
+when evidence is available:
+
+- **Coca-Cola Share a Coke**: which of the three applications Tao personally
+  built or owned, and any technical decisions or outcomes worth stating.
+- **Archetype All Types**: the components, interactions or integrations Tao
+  implemented.
+- **National Women's Enterprise Week**: the same.
+- **Archetype UK Digital Team**: the same.
+- **DataFlow**: the split between the corporate website and IoT monitoring work,
+  and what Tao personally delivered in each.
+- **Hyve Managed Hosting**: any specific features, refactors, reliability work
+  or process improvements beyond maintaining the Angular ticketing system.
+
+Until this evidence is provided, the portfolio will keep the existing
+product-level descriptions and will not invent responsibilities, metrics or
+outcomes.
+
 ## Affects
 
 `index.html`, `features/`, and future CV updates.
