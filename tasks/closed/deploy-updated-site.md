@@ -29,4 +29,14 @@ of `dist/` to the nginx web root. This step needs access to the VPS.
 
 ## Outcome
 
-Filled in when the task is closed.
+Production at https://tao.cl/ was deployed using `scripts/deploy.sh`. The
+remote server pulled the latest `origin/main`, built the site and rsynced
+`~/tao.cl/dist/` to `/var/www/tao.cl`.
+
+Verified that https://tao.cl/ serves the Product Engineer title, 10+ year
+description, Hyve role, MyHyve commercial-work entry and the new CV link.
+`Tao_Zamorano_Product_Engineer_CV.pdf`, the MyHyve WebP, `robots.txt`,
+`sitemap.xml` and `og.png` all return HTTP 200 from the production domain.
+
+Lighthouse against production reports accessibility, best practices and SEO all
+at 1.0 with no failures.

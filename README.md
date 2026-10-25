@@ -28,6 +28,7 @@ src/main.css            Tailwind import, link styles, layout and motion
 src/main.js             Scroll reveal with an IntersectionObserver
 src/img/                Logo, social-card source and portfolio screenshots
 public/                 Current CV, robots.txt, sitemap.xml and social image
+scripts/                Deployment helpers
 workflow/               Agent-assisted work rules, templates and lint
 issues/, tasks/, features/
                         Work items and durable project notes
@@ -56,10 +57,20 @@ build locally. The only build output that should be published is the contents of
 ## Deployment
 
 The live site is a static build served by nginx from a VPS; the response headers
-at <https://tao.cl/> show `server: nginx/1.18.0 (Ubuntu)`. The deployment
-configuration and any upload script are not part of this repository. A deploy
-therefore means building locally and copying the contents of `dist/` to the
-server's web root. There is no server-side component to run.
+at <https://tao.cl/> show `server: nginx/1.18.0 (Ubuntu)`. There is no
+server-side component to run.
+
+A deploy is performed with:
+
+```sh
+sh scripts/deploy.sh
+```
+
+The script builds the site, runs `sh workflow/lint.sh`, pushes the current
+branch, then SSHs to the remote server to pull the repository, build there and
+rsync `~/tao.cl/dist/` to `/var/www/tao.cl`. It assumes an SSH host alias
+`tao` is configured locally and the remote server has the repository clone at
+`~/tao.cl`.
 
 `robots.txt` and `sitemap.xml` are copied from `public/` and assume the site is
 served from `https://tao.cl/`. The social image at `public/og.png` was rendered
