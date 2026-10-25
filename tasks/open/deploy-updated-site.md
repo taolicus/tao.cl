@@ -2,10 +2,10 @@
 
 ## Context
 
-The portfolio changes are committed and pushed to `origin/main` through
-`c865829`. Production at https://tao.cl/ still serves the September 2025 build:
-the page title is the old "Full-Stack Web Developer" version and nginx reports
-`Last-Modified: Fri, 05 Sep 2025`.
+The latest portfolio changes are on `origin/main` but have not yet been
+deployed to production. Production at https://tao.cl/ still serves the previous
+build and does not yet include the Product Engineer CV, the 10+ year positioning
+or the Hyve role.
 
 The repository contains no deploy script, server configuration or credentials.
 `README.md` documents the supported process: build locally and copy the contents
@@ -13,10 +13,10 @@ of `dist/` to the nginx web root. This step needs access to the VPS.
 
 ## Acceptance criteria
 
-- https://tao.cl/ serves the new Product Engineer title, description and page
-  sections.
-- `robots.txt`, `sitemap.xml`, `og.png` and the WebP portfolio images all return
-  HTTP 200 from the production domain.
+- https://tao.cl/ serves the latest Product Engineer title, description, page
+  sections, Hyve role and the new CV link.
+- `Tao_Zamorano_Product_Engineer_CV.pdf`, `robots.txt`, `sitemap.xml`, `og.png`
+  and the WebP portfolio images all return HTTP 200 from the production domain.
 - A Lighthouse run against production reports accessibility, best practices and
   SEO without failures.
 

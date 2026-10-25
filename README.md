@@ -27,7 +27,7 @@ index.html              The page content and metadata
 src/main.css            Tailwind import, link styles, layout and motion
 src/main.js             Scroll reveal with an IntersectionObserver
 src/img/                Logo, social-card source and portfolio screenshots
-public/                 CV files, robots.txt, sitemap.xml and social image
+public/                 Current CV, robots.txt, sitemap.xml and social image
 workflow/               Agent-assisted work rules, templates and lint
 issues/, tasks/, features/
                         Work items and durable project notes
