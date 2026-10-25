@@ -1,13 +1,19 @@
-console.log("TAO.cl");
+const reveals = document.querySelectorAll(".reveal");
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("reveal-active");
-    }
-  });
-});
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-active");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { rootMargin: "0px 0px -10% 0px", threshold: 0.1 },
+  );
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-});
+  reveals.forEach((el) => observer.observe(el));
+} else {
+  reveals.forEach((el) => el.classList.add("reveal-active"));
+}

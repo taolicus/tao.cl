@@ -3,141 +3,553 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tao Zamorano • Full-Stack Web Developer</title>
-    <link rel="shortcut icon" href="./src/img/tao.svg" />
+    <title>Tao Zamorano — Product Engineer</title>
+    <meta
+      name="description"
+      content="Tao Zamorano is a London-based Product Engineer with 9+ years of commercial web development experience, building complete web products from interface to infrastructure."
+    />
+    <meta name="author" content="Tao Zamorano" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="canonical" href="https://tao.cl/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tao Zamorano" />
+    <meta property="og:title" content="Tao Zamorano — Product Engineer" />
+    <meta
+      property="og:description"
+      content="London-based Product Engineer with 9+ years of commercial web development experience, building complete web products from interface to infrastructure."
+    />
+    <meta property="og:url" content="https://tao.cl/" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:image" content="https://tao.cl/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Tao Zamorano, Product Engineer, London"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tao Zamorano — Product Engineer" />
+    <meta
+      name="twitter:description"
+      content="London-based Product Engineer with 9+ years of commercial web development experience, building complete web products from interface to infrastructure."
+    />
+    <meta name="twitter:image" content="https://tao.cl/og.png" />
+
+    <link rel="icon" type="image/svg+xml" href="./src/img/tao.svg" />
     <link rel="stylesheet" href="./src/main.css" />
-    <script src="./src/main.js" type="module" defer></script>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script
+      src="./src/main.js"
+      type="module"
+      onerror="document.documentElement.classList.remove('js')"
+    ></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tao Zamorano",
+        "jobTitle": "Product Engineer",
+        "url": "https://tao.cl/",
+        "description": "London-based Product Engineer with 9+ years of commercial web development experience.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "London",
+          "addressCountry": "GB"
+        },
+        "sameAs": [
+          "https://github.com/taolicus",
+          "https://www.linkedin.com/in/taozamorano"
+        ]
+      }
+    </script>
   </head>
 
-  <body class="bg-black text-center font-extralight text-balance text-white">
-    <section
+  <body class="bg-black text-center font-extralight text-white">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header
       id="home"
-      class="flex min-h-screen flex-col items-center justify-center gap-6 px-3 py-12"
+      class="flex min-h-screen flex-col items-center justify-center gap-5 px-5 py-16"
     >
-      <div class="flex justify-center overflow-clip">
-        <div class="max-w-[400px] p-4">
-          <h1>
-            <img id="tao" src="./src/img/tao.svg" alt="Tao" />
-          </h1>
+      <div class="flex w-full justify-center overflow-clip">
+        <div class="w-full max-w-[280px] p-4 sm:max-w-[400px]">
+          <img
+            id="tao"
+            src="./src/img/tao.svg"
+            alt=""
+            width="512"
+            height="512"
+            class="h-auto w-full"
+          />
         </div>
       </div>
-      <h2 class="text-6xl text-red-500">Hi. I'm Tao.</h2>
-      <h1 class="text-3xl">A London based web worker from Santiago, Chile.</h1>
-      <h2 class="text-2xl">
-        I work with <span class="font-serif italic">HTML</span>,
-        <span class="font-serif italic">CSS</span>,
-        <span class="font-serif italic">JS</span> and
-        <span class="font-serif italic">PHP</span>.
-      </h2>
-      <a href="#work">&gt; Check my work</a>
-    </section>
 
-    <main
-      id="work"
-      class="mx-auto flex max-w-[900px] flex-col gap-8 px-5 py-24 text-left"
-    >
-      <div class="project reveal">
+      <p class="text-2xl text-red-500">Hi. I'm Tao.</p>
+      <h1 class="max-w-[800px] text-5xl leading-[1.05] sm:text-6xl md:text-7xl">
+        Product Engineer
+      </h1>
+      <p class="max-w-[680px] text-2xl leading-snug text-pretty sm:text-3xl">
+        I design, build and ship complete web products — from the interface
+        people use to the systems behind it.
+      </p>
+      <p class="max-w-[640px] text-lg leading-relaxed text-pretty text-neutral-300">
+        Nine years of commercial web development, mostly implementing features
+        and specifications across frontend and backend systems. Now focused on
+        end-to-end product work: understanding the problem, choosing the
+        simplest architecture and getting it live.
+      </p>
+      <p class="max-w-[640px] text-base leading-relaxed text-pretty text-neutral-400">
+        London-based, originally from Santiago, Chile. Commercial work in
+        JavaScript, TypeScript, PHP, React, Vue, Laravel and WordPress;
+        independent products built with Go and plain web standards.
+      </p>
+
+      <div class="mt-2 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-lg">
+        <a href="#work" class="font-normal">See selected work</a>
         <a
-          href="https://www.coca-cola.com/gb/en/offerings/share-a-coke/customisation/customisation"
-          target="_blank"
+          href="/Tao Zamorano - Resume - Sep 2025.pdf"
+          download
+          class="font-normal"
+          >Download CV<span class="sr-only"> (PDF, updated September 2025)</span></a
         >
-          <div class="description">
-            <h2>Coca-Cola Share a Coke</h2>
-            <p class="year">M10c • 2025</p>
-            <p>
-              Interactive customisation platform for Coca-Cola's global "Share a
-              Coke" campaign, enabling users to personalise their Coke bottles
-              with custom names and messages.
-            </p>
-          </div>
-          <img src="./src/img/portfolio/sac.png" alt="Share a Coke" />
-        </a>
+        <a href="#contact" class="font-normal">Get in touch</a>
       </div>
-      <div class="project reveal">
-        <a href="https://alltypes.archetype.co/" target="_blank">
-          <div class="description">
-            <h2>Archetype All Types</h2>
-            <p class="year">Archetype • 2023</p>
-            <p>
-              Dedicated diversity and inclusion website showcasing Archetype's
-              commitment to workplace equity, featuring employee stories and
-              company initiatives.
-            </p>
+
+      <nav
+        aria-label="Page sections"
+        class="site-nav mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-base"
+      >
+        <a href="#work">Work</a>
+        <a href="#products">Products</a>
+        <a href="#approach">Approach</a>
+        <a href="#background">Background</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <section
+        id="work"
+        aria-labelledby="work-heading"
+        class="mx-auto max-w-[900px] px-5 py-20 sm:py-24"
+      >
+        <h2
+          id="work-heading"
+          class="mb-4 text-left text-4xl sm:text-5xl"
+        >
+          Selected commercial work
+        </h2>
+        <p class="mb-14 max-w-[680px] text-left text-lg text-pretty text-neutral-300">
+          Products and campaigns delivered with teams at M10c, Archetype and
+          DataFlow. I worked as part of the delivery team on each; the
+          descriptions below stick to what the product does.
+        </p>
+
+        <div class="flex flex-col gap-14">
+          <article class="project reveal">
+            <a
+              href="https://web.archive.org/web/20250806182256/https://www.coca-cola.com/gb/en/offerings/share-a-coke/customisation/customisation"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="description">
+                <h3>Coca-Cola Share a Coke</h3>
+                <p class="year">Front-end developer at M10c · 2025</p>
+                <p>
+                  One of three web applications built for Coca-Cola's
+                  international Share a Coke campaign. The customisation
+                  experience lets people personalise bottles with names and
+                  messages, with multi-language support and deployment through
+                  Vercel.
+                </p>
+                <p class="visit">View archived site →<span class="sr-only">
+                    (opens in a new tab)</span
+                  ></p>
+              </div>
+              <img
+                src="./src/img/portfolio/sac.png"
+                alt="The Share a Coke bottle customisation interface"
+                width="3072"
+                height="1702"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </article>
+
+          <article class="project reveal">
+            <a href="https://alltypes.archetype.co/" target="_blank" rel="noopener">
+              <div class="description">
+                <h3>Archetype All Types</h3>
+                <p class="year">Developer at Archetype · 2023</p>
+                <p>
+                  Diversity and inclusion website for Archetype, featuring
+                  employee stories and the agency's workplace initiatives.
+                </p>
+                <p class="visit">Visit the site →<span class="sr-only">
+                    (opens in a new tab)</span
+                  ></p>
+              </div>
+              <img
+                src="./src/img/portfolio/alltypes.jpg"
+                alt="The Archetype All Types homepage"
+                width="1692"
+                height="1590"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </article>
+
+          <article class="project reveal">
+            <a
+              href="https://web.archive.org/web/20260116061227/https://www.nwew.co.uk/"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="description">
+                <h3>National Women's Enterprise Week</h3>
+                <p class="year">Developer at Archetype · 2024</p>
+                <p>
+                  Official website for a UK-wide initiative supporting female
+                  entrepreneurs, with event listings and a showcase of press
+                  coverage and partnerships.
+                </p>
+                <p class="visit">View archived site →<span class="sr-only">
+                    (opens in a new tab)</span
+                  ></p>
+              </div>
+              <img
+                src="./src/img/portfolio/nwew.jpg"
+                alt="The National Women's Enterprise Week homepage"
+                width="1474"
+                height="1650"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </article>
+
+          <article class="project reveal">
+            <a
+              href="https://www.archetype.co/uk/digital/"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="description">
+                <h3>Archetype UK Digital Team</h3>
+                <p class="year">Developer at Archetype · 2023</p>
+                <p>
+                  Digital services website for Archetype's specialist B2B and
+                  SaaS marketing team, featuring client testimonials and service
+                  portfolios.
+                </p>
+                <p class="visit">Visit the site →<span class="sr-only">
+                    (opens in a new tab)</span
+                  ></p>
+              </div>
+              <img
+                src="./src/img/portfolio/archetype-uk-digital.jpg"
+                alt="The Archetype UK Digital Team homepage"
+                width="1538"
+                height="1640"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </article>
+
+          <article class="project reveal">
+            <a href="https://dataflow.cl/" target="_blank" rel="noopener">
+              <div class="description">
+                <h3>DataFlow</h3>
+                <p class="year">Web and IoT developer at DataFlow · 2018</p>
+                <p>
+                  Corporate website for a Chilean technology consultancy
+                  specialising in IBM DataPower support and enterprise
+                  integration services, built alongside IoT monitoring work.
+                </p>
+                <p class="visit">Visit the site →<span class="sr-only">
+                    (opens in a new tab)</span
+                  ></p>
+              </div>
+              <img
+                src="./src/img/portfolio/dataflow.jpg"
+                alt="The DataFlow homepage"
+                width="1950"
+                height="1728"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="products"
+        aria-labelledby="products-heading"
+        class="border-t border-white/15"
+      >
+        <div class="mx-auto max-w-[900px] px-5 py-20 sm:py-24">
+          <h2 id="products-heading" class="mb-4 text-left text-4xl sm:text-5xl">
+            Independent products
+          </h2>
+          <p class="mb-14 max-w-[680px] text-left text-lg text-pretty text-neutral-300">
+            Designed, built and deployed end to end: rules, protocol, interface,
+            tests and hosting. These are my own products, separate from client
+            delivery.
+          </p>
+
+          <div class="flex flex-col gap-12">
+            <article class="product reveal">
+              <h3>Kachipun Tournament</h3>
+              <p class="product-meta">KXP · Go, SSE, server-authoritative game</p>
+              <p>
+                Real-time online rock-paper-scissors played on a shared
+                countdown. Invite a friend, meet a stranger through matchmaking,
+                or climb the arcade ladder one fighter at a time. A single Go
+                binary serves the embedded interface, judges every throw by
+                arrival time and streams updates over SSE.
+              </p>
+              <p class="product-links">
+                <a href="https://kxp.pifia.net" target="_blank" rel="noopener"
+                  >Play KXP<span class="sr-only"> (opens in a new tab)</span></a
+                >
+                <a
+                  href="https://github.com/taolicus/kxp"
+                  target="_blank"
+                  rel="noopener"
+                  >Source<span class="sr-only"> (opens in a new tab)</span></a
+                >
+              </p>
+            </article>
+
+            <article class="product reveal">
+              <h3>Two Idiots, One Ship</h3>
+              <p class="product-meta">
+                Asteroids · Go, Canvas, two-player co-op
+              </p>
+              <p>
+                Two-player co-op Asteroids in the browser. One player pilots,
+                the other fires; both share the ship, lives and score. A Go
+                server runs the authoritative simulation at a fixed timestep and
+                streams snapshots to a canvas client with touch controls.
+              </p>
+              <p class="product-links">
+                <a
+                  href="https://asteroids.pifia.net"
+                  target="_blank"
+                  rel="noopener"
+                  >Play Two Idiots, One Ship<span class="sr-only">
+                    (opens in a new tab)</span
+                  ></a
+                >
+                <a
+                  href="https://github.com/taolicus/asteroids"
+                  target="_blank"
+                  rel="noopener"
+                  >Source<span class="sr-only"> (opens in a new tab)</span></a
+                >
+              </p>
+            </article>
+
+            <article class="product reveal">
+              <h3>Komikan</h3>
+              <p class="product-meta">
+                Komikan · Go, rules engine, multiplayer
+              </p>
+              <p>
+                A web version of a traditional Mapuche board game: one puma
+                against twelve dogs. Players join a room by link, the Go rules
+                engine decides every move, and both pages update live. The
+                interface is in Spanish.
+              </p>
+              <p class="product-links">
+                <a
+                  href="https://komikan.tequionet.org"
+                  target="_blank"
+                  rel="noopener"
+                  >Play Komikan<span class="sr-only"> (opens in a new tab)</span></a
+                >
+                <a
+                  href="https://github.com/taolicus/komikan"
+                  target="_blank"
+                  rel="noopener"
+                  >Source<span class="sr-only"> (opens in a new tab)</span></a
+                >
+              </p>
+            </article>
           </div>
-          <img src="./src/img/portfolio/alltypes.jpg" alt="All Types" />
-        </a>
-      </div>
-      <div class="project reveal">
-        <a href="https://www.nwew.co.uk/" target="_blank">
-          <div class="description">
-            <h2>National Women's Enterprise Week</h2>
-            <p class="year">Archetype • 2024</p>
-            <p>
-              Official website for UK's nationwide initiative supporting female
-              entrepreneurs, featuring event listings and media showcase section
-              highlighting press coverage and partnerships.
-            </p>
+        </div>
+      </section>
+
+      <section
+        id="approach"
+        aria-labelledby="approach-heading"
+        class="border-t border-white/15"
+      >
+        <div class="mx-auto max-w-[900px] px-5 py-20 sm:py-24">
+          <h2 id="approach-heading" class="mb-10 text-left text-4xl sm:text-5xl">
+            Approach
+          </h2>
+
+          <div class="grid gap-10 text-left sm:grid-cols-3">
+            <div>
+              <h3 class="approach-heading">Simple systems</h3>
+              <p class="text-pretty text-neutral-300">
+                I favour simple, maintainable architectures and the smallest
+                amount of complexity a product needs. That usually means
+                server-rendered HTML, progressive enhancement and a small amount
+                of JavaScript.
+              </p>
+            </div>
+            <div>
+              <h3 class="approach-heading">Pragmatic choices</h3>
+              <p class="text-pretty text-neutral-300">
+                I am technology-agnostic professionally. I have worked in
+                JavaScript, TypeScript and PHP, and reach for Go on independent
+                products when a single binary and a small dependency surface
+                make sense.
+              </p>
+            </div>
+            <div>
+              <h3 class="approach-heading">AI-assisted, human-reviewed</h3>
+              <p class="text-pretty text-neutral-300">
+                I use AI coding agents to move faster, while keeping changes
+                small and reviewable. Tests, version control and code review
+                remain the checks that decide whether work is finished.
+              </p>
+            </div>
           </div>
-          <img src="./src/img/portfolio/nwew.jpg" alt="NWEW" />
-        </a>
-      </div>
-      <div class="project reveal">
-        <a href="https://www.archetype.co/uk/digital/" target="_blank">
-          <div class="description">
-            <h2>Archetype UK Digital Team</h2>
-            <p class="year">Archetype • 2023</p>
-            <p>
-              Digital services showcase website for Archetype's specialist B2B
-              and SaaS marketing team, featuring client testimonials and service
-              portfolios.
-            </p>
-          </div>
-          <img
-            src="./src/img/portfolio/archetype-uk-digital.jpg"
-            alt="Archetype UK Digital"
-          />
-        </a>
-      </div>
-      <div class="project reveal">
-        <a href="https://dataflow.cl/" target="_blank">
-          <div class="description">
-            <h2>DataFlow</h2>
-            <p class="year">DataFlow • 2018</p>
-            <p>
-              Corporate website for a Chilean technology consultancy
-              specialising in IBM DataPower support and enterprise integration
-              services.
-            </p>
-          </div>
-          <img src="./src/img/portfolio/dataflow.jpg" alt="DataFlow" />
-        </a>
-      </div>
+        </div>
+      </section>
+
+      <section
+        id="background"
+        aria-labelledby="background-heading"
+        class="border-t border-white/15"
+      >
+        <div class="mx-auto max-w-[900px] px-5 py-20 sm:py-24">
+          <h2
+            id="background-heading"
+            class="mb-10 text-left text-4xl sm:text-5xl"
+          >
+            Background
+          </h2>
+
+          <ol class="background-list">
+            <li>
+              <div class="role">
+                <h3>Front-end Developer · M10c</h3>
+                <p class="dates">Oct 2024 – Jun 2025</p>
+              </div>
+              <p>
+                Built React and TypeScript applications for Coca-Cola's Share a
+                Coke campaign, with multi-language support and global deployment
+                through Vercel.
+              </p>
+            </li>
+            <li>
+              <div class="role">
+                <h3>Developer · Archetype</h3>
+                <p class="dates">Jan 2020 – Aug 2024</p>
+              </div>
+              <p>
+                Delivered custom websites, infographics and interactive media for
+                10+ international clients, working with international teams
+                across four or more time zones.
+              </p>
+            </li>
+            <li>
+              <div class="role">
+                <h3>Web and IoT Developer · DataFlow</h3>
+                <p class="dates">Nov 2017 – Mar 2019</p>
+              </div>
+              <p>
+                Built the corporate website and IoT monitoring solutions for
+                public and enterprise clients, and led technical upskilling for a
+                team of three developers.
+              </p>
+            </li>
+            <li>
+              <div class="role">
+                <h3>Full Stack Developer · Bindex</h3>
+                <p class="dates">Aug 2016 – Dec 2017</p>
+              </div>
+              <p>
+                Maintained a PHP investment analysis application with automated
+                data scraping, and managed the server infrastructure behind it.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        aria-labelledby="contact-heading"
+        class="border-t border-white/15"
+      >
+        <div
+          class="mx-auto flex max-w-[900px] flex-col items-center gap-6 px-5 py-20 text-center sm:py-28"
+        >
+          <h2 id="contact-heading" class="text-4xl sm:text-5xl">Get in touch</h2>
+          <p class="max-w-[560px] text-lg text-pretty text-neutral-300">
+            I am looking for product engineering roles where I can own delivery
+            end to end, and I am always happy to talk about simple web
+            architecture.
+          </p>
+
+          <p class="text-2xl sm:text-3xl">
+            <a href="mailto:taozamorano@gmail.com">taozamorano@gmail.com</a>
+          </p>
+          <p class="text-xl sm:text-2xl">
+            <a href="tel:+447888408175">+44 7888 408175</a>
+          </p>
+
+          <p class="mt-2 flex flex-wrap justify-center gap-x-3 gap-y-2 text-lg">
+            <a href="/Tao Zamorano - Resume - Sep 2025.pdf" download
+              >CV (PDF, September 2025)</a
+            >
+            <span aria-hidden="true">•</span>
+            <a
+              href="https://github.com/taolicus"
+              target="_blank"
+              rel="noopener"
+              >GitHub<span class="sr-only"> (opens in a new tab)</span></a
+            >
+            <span aria-hidden="true">•</span>
+            <a
+              href="https://www.linkedin.com/in/taozamorano"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn<span class="sr-only"> (opens in a new tab)</span></a
+            >
+          </p>
+          <p class="text-sm text-neutral-400">
+            CV file: Tao Zamorano - Resume - Sep 2025.pdf
+          </p>
+        </div>
+      </section>
     </main>
 
-    <section
-      class="flex flex-col items-center justify-center gap-4 pt-32 pb-56"
-    >
-      <p class="text-3xl">
-        <a href="mailto:taozamorano@gmail.com">taozamorano@gmail.com</a>
-      </p>
-
-      <p class="text-3xl">
-        <a href="tel:+447888408175">+44 7888 408175</a>
-      </p>
-
-      <p class="text-lg">
-        <a href="/Tao Zamorano - Resume - Sep 2025.pdf" download>Resume</a>
-        • <a href="https://github.com/taolicus" target="_blank">Github</a> •
-        <a href="https://linkedin.com/in/taozamorano" target="_blank"
-          >Linkedin</a
-        >
-      </p>
-    </section>
-
-    <footer class="flex items-center justify-center py-6">
-      <a href="#home" title="Back to Home" class="inline-block"
-        ><img id="signature" class="w-12" src="./src/img/tao.svg" alt="Tao"
-      /></a>
+    <footer class="flex items-center justify-center gap-6 py-8">
+      <a href="#home" class="inline-block" aria-label="Back to top">
+        <img
+          id="signature"
+          class="h-auto w-12"
+          src="./src/img/tao.svg"
+          alt=""
+          width="512"
+          height="512"
+        />
+      </a>
+      <p class="text-sm text-neutral-400">© 2026 Tao Zamorano</p>
     </footer>
   </body>
 </html>
