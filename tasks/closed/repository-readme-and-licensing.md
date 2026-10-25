@@ -41,4 +41,19 @@ practice, not as the subject of the repository.
 
 ## Outcome
 
-Filled in when the task is closed.
+Added `README.md` covering the site's purpose, stack, layout, local commands,
+static nginx deployment, image/social-card generation, workflow and licence.
+
+Added an ISC `LICENSE` matching `package.json`, with a clear statement that the
+portfolio screenshots, client names, logos and campaign imagery remain the
+property of their owners and are not covered by the code licence. The README
+also explains why the Coca-Cola and National Women's Enterprise Week links point
+to archived copies.
+
+Filled in the `description` and `author` fields in `package.json`.
+
+Verified `npm ci`, `npm run dev`, `npm run build`, `npm run preview` and
+`sh workflow/lint.sh` in this environment. The live nginx response header was
+used for the deployment description; no deployment script or server
+configuration is claimed because none exists in the repository.
+

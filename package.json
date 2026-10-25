@@ -1,7 +1,7 @@
 {
   "name": "tao.cl",
   "version": "1.0.0",
-  "description": "",
+  "description": "Personal portfolio website for Tao Zamorano, Product Engineer.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/taolicus/tao.cl.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Tao Zamorano",
   "license": "ISC",
   "type": "module",
   "bugs": {
