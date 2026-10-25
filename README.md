@@ -66,11 +66,11 @@ A deploy is performed with:
 sh scripts/deploy.sh
 ```
 
-The script builds the site, runs `sh workflow/lint.sh`, pushes the current
-branch, then SSHs to the remote server to pull the repository, build there and
-rsync `~/tao.cl/dist/` to `/var/www/tao.cl`. It assumes an SSH host alias
-`tao` is configured locally and the remote server has the repository clone at
-`~/tao.cl`.
+The script builds the site locally, runs `sh workflow/lint.sh`, pushes the
+current branch, then rsyncs only `dist/` to `/var/www/tao.cl` on the remote
+server. The repository itself does not need to live on the server; the script
+removes the old server-side clone and the obsolete remote deploy script after a
+successful deploy. It assumes an SSH host alias `tao` is configured locally.
 
 `robots.txt` and `sitemap.xml` are copied from `public/` and assume the site is
 served from `https://tao.cl/`. The social image at `public/og.png` was rendered
