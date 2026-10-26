@@ -25,21 +25,20 @@ First-hand contribution evidence has been added for:
 
 ## Open questions
 
-- For **Archetype All Types**, **National Women's Enterprise Week** and
-  **Archetype UK Digital Team**, what did Tao personally build or own, and are
+- For **Archetype All Types**, what did Tao personally build or own, and are
   there verifiable outcomes worth stating?
 
 ## What would resolve it
 
-One or two sentences of first-hand contribution detail per remaining commercial
-project.
+One or two sentences of first-hand contribution detail for Archetype All Types.
 
 ## Notes from latest review
 
-No first-hand contribution evidence has been provided yet for the three
-Archetype projects. Until it is available, their portfolio descriptions will
-remain at the product/team level and will not invent responsibilities, metrics
-or outcomes.
+National Women's Enterprise Week and Archetype UK Digital Team have been
+removed from the portfolio because no first-hand contribution evidence is
+available. Archetype All Types remains until evidence is provided; its
+description will stay at the product/team level and will not invent
+responsibilities, metrics or outcomes.
 
 ## Affects
 
