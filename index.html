@@ -39,13 +39,16 @@
     <link rel="icon" type="image/svg+xml" href="./src/img/tao.svg" />
     <link rel="stylesheet" href="./src/main.css" />
     <script>
+      // Reveal styles only apply while this class is present. If the module
+      // never reports ready, drop it so the content stays visible.
       document.documentElement.classList.add("js");
+      window.setTimeout(function () {
+        if (!document.documentElement.classList.contains("js-ready")) {
+          document.documentElement.classList.remove("js");
+        }
+      }, 1500);
     </script>
-    <script
-      src="./src/main.js"
-      type="module"
-      onerror="document.documentElement.classList.remove('js')"
-    ></script>
+    <script src="./src/main.js" type="module"></script>
 
     <script type="application/ld+json">
       {
@@ -71,52 +74,54 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header id="home">
-      <div>
-        <div>
-          <img
-            id="tao"
-            src="./src/img/tao.svg"
-            alt=""
-            width="512"
-            height="512"
-          />
-        </div>
-      </div>
-
-      <h1>I'm Tao.</h1>
-      <p>
-        A Product Engineer with 10+ years of commercial web development
-        experience across frontend and backend systems. London-based, originally
-        from Santiago, Chile.
-      </p>
-      <p>
-        Commercial work in JavaScript, TypeScript, PHP, C#, React, Angular, Vue,
-        Laravel and WordPress. Independent products built with Go and plain web
-        standards.
-      </p>
-
-      <div>
-        <a href="#work">See selected work</a>
-        <a href="/Tao_Zamorano_Product_Engineer_CV.pdf" download
-          >Download CV<span class="sr-only">
-            (PDF, updated October 2026)</span
-          ></a
-        >
-        <a href="#contact">Get in touch</a>
-      </div>
-
-      <nav aria-label="Page sections" class="site-nav">
-        <a href="#work">Work</a>
-        <a href="#products">Products</a>
-        <a href="#approach">Approach</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-
     <main id="main" tabindex="-1">
-      <section id="work" aria-labelledby="work-heading">
-        <h2 id="work-heading">Selected commercial work</h2>
+      <header id="home">
+        <!-- The inner wrapper bounds the spinning logo's width; the outer one
+             clips the corners that rotate past that bound. -->
+        <div>
+          <div>
+            <img
+              id="tao"
+              src="./src/img/tao.svg"
+              alt=""
+              width="512"
+              height="512"
+            />
+          </div>
+        </div>
+
+        <h1>I'm Tao.</h1>
+        <p>
+          A Product Engineer with 10+ years of commercial web development
+          experience across frontend and backend systems. London-based,
+          originally from Santiago, Chile.
+        </p>
+        <p>
+          Commercial work in JavaScript, TypeScript, PHP, C#, React, Angular,
+          Vue, Laravel and WordPress. Independent products built with Go and
+          plain web standards.
+        </p>
+
+        <div>
+          <a href="#work">See selected work</a>
+          <a href="/Tao_Zamorano_Product_Engineer_CV.pdf" download
+            >Download CV<span class="sr-only">
+              (PDF, updated October 2026)</span
+            ></a
+          >
+          <a href="#contact">Get in touch</a>
+        </div>
+
+        <nav aria-label="Page sections" class="site-nav">
+          <a href="#work">Work</a>
+          <a href="#products">Products</a>
+          <a href="#approach">Approach</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <section id="work">
+        <h2>Selected commercial work</h2>
         <p>
           Products and campaigns delivered with teams at Hyve Managed Hosting,
           M10c, Archetype and DataFlow.
@@ -146,9 +151,8 @@
                   after engineering evaluation.
                 </p>
                 <p class="visit">
-                  Visit the site →<span class="sr-only">
-                    (opens in a new tab)</span
-                  >
+                  Visit the site <span aria-hidden="true">→</span
+                  ><span class="sr-only"> (opens in a new tab)</span>
                 </p>
               </div>
               <img
@@ -183,9 +187,8 @@
                   priorities meant it was not shipped.
                 </p>
                 <p class="visit">
-                  View archived site →<span class="sr-only">
-                    (opens in a new tab)</span
-                  >
+                  View archived site <span aria-hidden="true">→</span
+                  ><span class="sr-only"> (opens in a new tab)</span>
                 </p>
               </div>
               <img
@@ -213,9 +216,8 @@
                   employee stories and the agency's workplace initiatives.
                 </p>
                 <p class="visit">
-                  Visit the site →<span class="sr-only">
-                    (opens in a new tab)</span
-                  >
+                  Visit the site <span aria-hidden="true">→</span
+                  ><span class="sr-only"> (opens in a new tab)</span>
                 </p>
               </div>
               <img
@@ -247,9 +249,8 @@
                   of the role, but the Ionic app was the shipped product.
                 </p>
                 <p class="visit">
-                  Visit the site →<span class="sr-only">
-                    (opens in a new tab)</span
-                  >
+                  Visit the site <span aria-hidden="true">→</span
+                  ><span class="sr-only"> (opens in a new tab)</span>
                 </p>
               </div>
               <img
@@ -265,9 +266,9 @@
         </div>
       </section>
 
-      <section id="products" aria-labelledby="products-heading">
+      <section id="products">
         <div>
-          <h2 id="products-heading">Independent products</h2>
+          <h2>Independent products</h2>
           <p>
             Designed, built and deployed end to end: rules, protocol, interface,
             tests and hosting. These are my own products, separate from client
@@ -361,9 +362,9 @@
         </div>
       </section>
 
-      <section id="approach" aria-labelledby="approach-heading">
+      <section id="approach">
         <div>
-          <h2 id="approach-heading">Approach</h2>
+          <h2>Approach</h2>
 
           <div>
             <div>
@@ -406,14 +407,9 @@
         </div>
       </section>
 
-      <section id="contact" aria-labelledby="contact-heading">
+      <section id="contact">
         <div>
-          <h2 id="contact-heading">Get in touch</h2>
-          <!-- <p>
-            I am looking for product engineering roles where I can own delivery
-            end to end, and I am always happy to talk about simple web
-            architecture.
-          </p> -->
+          <h2>Get in touch</h2>
 
           <p>
             <a href="mailto:taozamorano@gmail.com">taozamorano@gmail.com</a>

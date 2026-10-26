@@ -17,3 +17,6 @@ if ("IntersectionObserver" in window) {
 } else {
   reveals.forEach((el) => el.classList.add("reveal-active"));
 }
+
+// Tell the inline head failsafe that the reveal script ran to completion.
+document.documentElement.classList.add("js-ready");
