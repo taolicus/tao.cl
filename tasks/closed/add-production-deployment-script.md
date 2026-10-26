@@ -1,6 +1,7 @@
 ---
 area: devops
-dependencies: [update-cv-and-add-hyve-experience.md, add-myhyve-commercial-work-entry.md]
+dependencies:
+  [update-cv-and-add-hyve-experience.md, add-myhyve-commercial-work-entry.md]
 ---
 
 # Add a production deployment script to the repository

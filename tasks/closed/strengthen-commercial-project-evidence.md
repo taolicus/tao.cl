@@ -42,6 +42,7 @@ DataFlow using only the verified firsthand evidence, keeping titles, dates,
 links and images unchanged.
 
 **MyHyve Ticketing Portal**
+
 - Described maintaining and modernising the Angular/C# support ticketing portal.
 - Added the Angular v19→v21 upgrade, npm audit reduction from more than 50 to
   fewer than five with three of four critical findings resolved, and the
@@ -52,6 +53,7 @@ links and images unchanged.
 - Avoided claiming all findings were eliminated or a full directory migration.
 
 **Coca-Cola Share a Coke**
+
 - Reframed the role as a frontend developer on a team-led React/TypeScript
   application.
 - Listed production contributions: personalisation forms, 2D customised-product
@@ -60,6 +62,7 @@ links and images unchanged.
   went live.
 
 **DataFlow — IBM DataPower Monitoring**
+
 - Retitled the card to "DataFlow — IBM DataPower Monitoring".
 - Described independently designing, building and deploying an Ionic mobile
   monitoring app integrated with IBM DataPower.
@@ -69,17 +72,20 @@ links and images unchanged.
   role but the Ionic app was the shipped product.
 
 **Background section**
+
 - Updated the DataFlow entry to mention the Ionic mobile monitoring app and
   Node-RED prototypes while keeping it concise.
 - Left Hyve and M10c entries unchanged to avoid duplicating detailed Work
   descriptions.
 
 **Issue tracking**
+
 - Updated `issues/commercial-project-details-need-input.md` to mark MyHyve,
   Share a Coke and DataFlow as resolved, and to keep the three Archetype
   projects as open questions until first-hand evidence is available.
 
 **Verification and deployment**
+
 - Built and linted locally; Lighthouse local preview: performance, accessibility,
   best practices and SEO all at 1.0.
 - Checked desktop (1440px) and mobile (375px) layout metrics: no horizontal

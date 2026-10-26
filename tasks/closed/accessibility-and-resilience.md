@@ -87,4 +87,3 @@ Lighthouse accessibility 1.0, best practices 1.0, SEO 1.0 with no failures;
 `npm run build` and `sh workflow/lint.sh` pass. Visual screenshots were captured,
 but the reviewing model cannot read images, so visual confirmation remains a
 user check.
-

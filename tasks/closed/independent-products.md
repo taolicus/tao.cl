@@ -67,4 +67,3 @@ single-column mobile layout.
 
 This outcome was committed with the positioning change rather than in a separate
 commit; the working history is therefore one commit for both tasks.
-

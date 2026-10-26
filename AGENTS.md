@@ -7,6 +7,7 @@ task, preserve existing work, avoid unrelated changes, and keep the repository
 in a coherent state.
 
 Use:
+
 - `issues/` for unresolved observations, problems, and questions.
 - `tasks/open/` for actionable work.
 - `tasks/closed/` for completed tasks retained for history.

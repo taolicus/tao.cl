@@ -1,6 +1,10 @@
 ---
 area: content
-dependencies: [add-myhyve-commercial-work-entry.md, remove-one-time-cleanup-from-deploy-script.md]
+dependencies:
+  [
+    add-myhyve-commercial-work-entry.md,
+    remove-one-time-cleanup-from-deploy-script.md,
+  ]
 ---
 
 # Prepare tao.cl for Product Engineer job applications

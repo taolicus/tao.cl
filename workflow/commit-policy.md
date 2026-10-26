@@ -10,6 +10,9 @@ that will be useful beyond that task. Do not duplicate documentation in commits.
 
 ## Completing tasks
 
+- Run Prettier on the changed files (e.g. `npx prettier --write .`) before
+  staging, so formatting matches the project's Prettier configuration and is
+  not left as an uncommitted diff after an editor save.
 - Run `sh workflow/lint.sh` and the relevant tests and checks when the
   environment permits.
 - Commit completed task changes after relevant verification.

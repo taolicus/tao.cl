@@ -56,4 +56,3 @@ Verified `npm ci`, `npm run dev`, `npm run build`, `npm run preview` and
 `sh workflow/lint.sh` in this environment. The live nginx response header was
 used for the deployment description; no deployment script or server
 configuration is claimed because none exists in the repository.
-

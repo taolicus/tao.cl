@@ -72,4 +72,3 @@ in some cases; Coca-Cola was checked directly and the archive link returns 200.
 Visual appearance was not reviewed by the model because it cannot read image
 output. Screenshots were captured for the user and DOM/computed-style checks
 were used instead.
-

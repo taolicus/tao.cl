@@ -319,7 +319,6 @@
   footer > p:last-child {
     @apply text-sm text-neutral-400;
   }
-
 }
 
 /* Logo animation */

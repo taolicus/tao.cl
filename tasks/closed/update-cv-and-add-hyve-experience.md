@@ -7,7 +7,7 @@ dependencies: [product-engineer-positioning.md]
 
 ## Context
 
-Tao supplied a new CV titled *Product Engineer*, dated October 2026, currently in
+Tao supplied a new CV titled _Product Engineer_, dated October 2026, currently in
 the repository root. It records more than ten years of commercial experience and
 adds a recent role at Hyve Managed Hosting maintaining the company's support
 ticketing system (myhyve.com) with Angular, C#, Sentry, GitLab and Playwright.

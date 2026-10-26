@@ -10,6 +10,7 @@ fragmentation.
 ## When to split
 
 Split work when:
+
 - A meaningful outcome can be implemented and verified independently.
 - Distinct outcomes have different acceptance criteria.
 - A step resolves significant uncertainty before further implementation.
@@ -27,6 +28,7 @@ a short plan and several tasks. Use a detailed breakdown only when complexity,
 risk, or dependencies justify it.
 
 Each task should define:
+
 - One coherent outcome.
 - Scope and important constraints.
 - Observable acceptance criteria.

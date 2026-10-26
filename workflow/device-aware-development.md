@@ -6,6 +6,7 @@ task risk, and the ability to verify the result.
 ## Phone
 
 Prefer bounded tasks that can be performed and reviewed effectively on a phone:
+
 - Review code, diffs, documentation, and investigation results.
 - Refine plans, acceptance criteria, and issue descriptions.
 - Make small, low-risk edits when suitable tools are available.
@@ -16,6 +17,7 @@ Do not assume every coding task must wait for a laptop.
 
 Defer work when it materially depends on capabilities unavailable on the phone,
 for example:
+
 - Local builds, substantial test runs, or debugging.
 - Simulator or desktop-tool workflows unavailable on the phone.
 - Changes that cannot be reliably reviewed or verified on mobile.
@@ -32,6 +34,7 @@ Record device constraints in a task only when they materially affect execution
 or verification. Do not require device metadata on every task.
 
 For cross-device handoffs, record:
+
 - Findings and decisions.
 - Changes made and unresolved questions.
 - The next concrete action.
