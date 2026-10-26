@@ -8,35 +8,38 @@ The CV records what each employer did in general terms but not what Tao
 personally owned on each portfolio project. The site therefore describes the
 products and Tao's team/role, not individual outcomes or metrics.
 
+## Resolved
+
+First-hand contribution evidence has been added for:
+
+- **Hyve Managed Hosting / MyHyve** — Angular/C# ticketing portal maintenance
+  and modernisation, Angular v19→v21 upgrade, npm audit reduction, signals,
+  rxResource, Tailwind CSS, feature-oriented code organisation and the recurring
+  monthly ticket workflow.
+- **Coca-Cola Share a Coke (M10c)** — React/TypeScript frontend development,
+  personalisation forms, 2D previews, multilingual interfaces, responsive
+  layouts and an unshipped Three.js prototype.
+- **DataFlow — IBM DataPower Monitoring** — Independently designed, built and
+  deployed an Ionic mobile monitoring app integrated with IBM DataPower,
+  iterated based on user/colleague feedback.
+
 ## Open questions
 
-- For Coca-Cola Share a Coke, Archetype All Types, National Women's Enterprise
-  Week, Archetype UK Digital, DataFlow and Hyve Managed Hosting, what did Tao
-  personally build or own, and are there verifiable outcomes worth stating?
+- For **Archetype All Types**, **National Women's Enterprise Week** and
+  **Archetype UK Digital Team**, what did Tao personally build or own, and are
+  there verifiable outcomes worth stating?
 
 ## What would resolve it
 
-One or two sentences of first-hand contribution detail per commercial project.
+One or two sentences of first-hand contribution detail per remaining commercial
+project.
 
-## Notes from latest review (before job applications)
+## Notes from latest review
 
-No first-hand contribution evidence has been added yet. Specific gaps to fill
-when evidence is available:
-
-- **Coca-Cola Share a Coke**: which of the three applications Tao personally
-  built or owned, and any technical decisions or outcomes worth stating.
-- **Archetype All Types**: the components, interactions or integrations Tao
-  implemented.
-- **National Women's Enterprise Week**: the same.
-- **Archetype UK Digital Team**: the same.
-- **DataFlow**: the split between the corporate website and IoT monitoring work,
-  and what Tao personally delivered in each.
-- **Hyve Managed Hosting**: any specific features, refactors, reliability work
-  or process improvements beyond maintaining the Angular ticketing system.
-
-Until this evidence is provided, the portfolio will keep the existing
-product-level descriptions and will not invent responsibilities, metrics or
-outcomes.
+No first-hand contribution evidence has been provided yet for the three
+Archetype projects. Until it is available, their portfolio descriptions will
+remain at the product/team level and will not invent responsibilities, metrics
+or outcomes.
 
 ## Affects
 
