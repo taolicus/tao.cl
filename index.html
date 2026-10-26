@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="min-h-screen scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -68,68 +68,45 @@
     </script>
   </head>
 
-  <body class="bg-black text-center font-extralight text-white">
+  <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header
-      id="home"
-      class="flex min-h-screen flex-col items-center justify-center gap-4 px-5 py-12 sm:py-16"
-    >
-      <div class="flex w-full justify-center overflow-clip">
-        <div class="w-full max-w-[220px] p-4 sm:max-w-[380px]">
+    <header id="home">
+      <div>
+        <div>
           <img
             id="tao"
             src="./src/img/tao.svg"
             alt=""
             width="512"
             height="512"
-            class="h-auto w-full"
           />
         </div>
       </div>
 
-      <p class="text-7xl text-red-500">Hi. I'm Tao.</p>
-      <h1 class="max-w-[800px] text-4xl leading-[1.05] sm:text-6xl md:text-7xl">
-        Product Engineer
-      </h1>
-      <p class="max-w-[680px] text-xl leading-snug text-pretty sm:text-3xl">
-        I design, build and ship complete web products — from the interface
-        people use to the systems behind it.
+      <h1>I'm Tao.</h1>
+      <p>
+        A Product Engineer with 10+ years of commercial web development
+        experience across frontend and backend systems. London-based, originally
+        from Santiago, Chile.
       </p>
-      <p
-        class="max-w-[640px] text-lg leading-relaxed text-pretty text-neutral-300"
-      >
-        10+ years of commercial web development across frontend and backend
-        systems, now focused on owning delivery end to end. London-based,
-        originally from Santiago, Chile.
-      </p>
-      <p
-        class="max-w-[640px] text-base leading-relaxed text-pretty text-neutral-400"
-      >
+      <p>
         Commercial work in JavaScript, TypeScript, PHP, C#, React, Angular, Vue,
         Laravel and WordPress. Independent products built with Go and plain web
         standards.
       </p>
 
-      <div
-        class="mt-2 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-lg"
-      >
-        <a href="#work" class="font-normal">See selected work</a>
-        <a
-          href="/Tao_Zamorano_Product_Engineer_CV.pdf"
-          download
-          class="font-normal"
+      <div>
+        <a href="#work">See selected work</a>
+        <a href="/Tao_Zamorano_Product_Engineer_CV.pdf" download
           >Download CV<span class="sr-only">
             (PDF, updated October 2026)</span
           ></a
         >
-        <a href="#contact" class="font-normal">Get in touch</a>
+        <a href="#contact">Get in touch</a>
       </div>
 
-      <nav
-        aria-label="Page sections"
-        class="site-nav mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-base"
-      >
+      <nav aria-label="Page sections" class="site-nav">
         <a href="#work">Work</a>
         <a href="#products">Products</a>
         <a href="#approach">Approach</a>
@@ -138,22 +115,14 @@
     </header>
 
     <main id="main" tabindex="-1">
-      <section
-        id="work"
-        aria-labelledby="work-heading"
-        class="mx-auto max-w-[900px] px-5 py-20 sm:py-24"
-      >
-        <h2 id="work-heading" class="mb-4 text-left text-4xl sm:text-5xl">
-          Selected commercial work
-        </h2>
-        <p
-          class="mb-14 max-w-[680px] text-left text-lg text-pretty text-neutral-300"
-        >
+      <section id="work" aria-labelledby="work-heading">
+        <h2 id="work-heading">Selected commercial work</h2>
+        <p>
           Products and campaigns delivered with teams at Hyve Managed Hosting,
           M10c, Archetype and DataFlow.
         </p>
 
-        <div class="flex flex-col gap-14">
+        <div>
           <article class="project reveal">
             <a href="https://www.myhyve.com" target="_blank" rel="noopener">
               <div class="description">
@@ -296,24 +265,16 @@
         </div>
       </section>
 
-      <section
-        id="products"
-        aria-labelledby="products-heading"
-        class="border-t border-white/15"
-      >
-        <div class="mx-auto max-w-[900px] px-5 py-20 sm:py-24">
-          <h2 id="products-heading" class="mb-4 text-left text-4xl sm:text-5xl">
-            Independent products
-          </h2>
-          <p
-            class="mb-14 max-w-[680px] text-left text-lg text-pretty text-neutral-300"
-          >
+      <section id="products" aria-labelledby="products-heading">
+        <div>
+          <h2 id="products-heading">Independent products</h2>
+          <p>
             Designed, built and deployed end to end: rules, protocol, interface,
             tests and hosting. These are my own products, separate from client
             delivery.
           </p>
 
-          <div class="flex flex-col gap-12">
+          <div>
             <article class="product reveal">
               <h3>Kachipun Tournament</h3>
               <p class="product-meta">
@@ -400,23 +361,14 @@
         </div>
       </section>
 
-      <section
-        id="approach"
-        aria-labelledby="approach-heading"
-        class="border-t border-white/15"
-      >
-        <div class="mx-auto max-w-[900px] px-5 py-20 sm:py-24">
-          <h2
-            id="approach-heading"
-            class="mb-10 text-left text-4xl sm:text-5xl"
-          >
-            Approach
-          </h2>
+      <section id="approach" aria-labelledby="approach-heading">
+        <div>
+          <h2 id="approach-heading">Approach</h2>
 
-          <div class="grid gap-10 text-left sm:grid-cols-3">
+          <div>
             <div>
               <h3 class="approach-heading">Simple systems</h3>
-              <p class="text-pretty text-neutral-300">
+              <p>
                 I favour simple, maintainable architectures and the smallest
                 amount of complexity a product needs. That usually means
                 server-rendered HTML, progressive enhancement and a small amount
@@ -425,7 +377,7 @@
             </div>
             <div>
               <h3 class="approach-heading">Pragmatic choices</h3>
-              <p class="text-pretty text-neutral-300">
+              <p>
                 I am technology-agnostic professionally. I have worked in
                 JavaScript, TypeScript, PHP and C#, and reach for Go on
                 independent products when a single binary and a small dependency
@@ -434,16 +386,14 @@
             </div>
             <div>
               <h3 class="approach-heading">AI-assisted, human-reviewed</h3>
-              <p class="text-pretty text-neutral-300">
+              <p>
                 I use AI coding agents with an
                 <a
                   href="https://github.com/taolicus/bootstrap"
                   target="_blank"
                   rel="noopener"
-                  class="underline"
                   >actively maintained Bootstrap workflow<span class="sr-only">
-                    (opens in a new tab)</span
-                  ></a
+                    (opens in a new tab)</span></a
                 >
                 for task scoping, persistent context and explicit verification,
                 while keeping changes small and reviewable. Tests, version
@@ -455,36 +405,31 @@
         </div>
       </section>
 
-      <section
-        id="contact"
-        aria-labelledby="contact-heading"
-        class="border-t border-white/15"
-      >
-        <div
-          class="mx-auto flex max-w-[900px] flex-col items-center gap-6 px-5 py-20 text-center sm:py-28"
-        >
-          <h2 id="contact-heading" class="text-4xl sm:text-5xl">
-            Get in touch
-          </h2>
-          <!-- <p class="max-w-[560px] text-lg text-pretty text-neutral-300">
+      <section id="contact" aria-labelledby="contact-heading">
+        <div>
+          <h2 id="contact-heading">Get in touch</h2>
+          <!-- <p>
             I am looking for product engineering roles where I can own delivery
             end to end, and I am always happy to talk about simple web
             architecture.
           </p> -->
 
-          <p class="text-2xl sm:text-3xl">
+          <p>
             <a href="mailto:taozamorano@gmail.com">taozamorano@gmail.com</a>
           </p>
-          <p class="text-xl sm:text-2xl">
+          <p>
             <a href="tel:+447888408175">+44 7888 408175</a>
           </p>
 
-          <p class="mt-2 flex flex-wrap justify-center gap-x-3 gap-y-2 text-lg">
+          <p>
             <a href="/Tao_Zamorano_Product_Engineer_CV.pdf" download
               >CV October 2026, PDF</a
             >
             <span aria-hidden="true">•</span>
-            <a href="https://github.com/taolicus" target="_blank" rel="noopener"
+            <a
+              href="https://github.com/taolicus"
+              target="_blank"
+              rel="noopener"
               >GitHub<span class="sr-only"> (opens in a new tab)</span></a
             >
             <span aria-hidden="true">•</span>
@@ -499,12 +444,11 @@
       </section>
     </main>
 
-    <footer class="flex flex-col items-center justify-center gap-2 pb-8">
+    <footer>
       <p>
-        <a href="#home" class="inline-block" aria-label="Back to top">
+        <a href="#home" aria-label="Back to top">
           <img
             id="signature"
-            class="h-auto w-12"
             src="./src/img/tao.svg"
             alt=""
             width="512"
@@ -512,7 +456,7 @@
           />
         </a>
       </p>
-      <p class="text-sm text-neutral-400">© 2026 Tao Zamorano</p>
+      <p>© 2026 Tao Zamorano</p>
     </footer>
   </body>
 </html>
