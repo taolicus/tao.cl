@@ -21,7 +21,7 @@
   }
 
   body {
-    @apply bg-surface text-foreground min-h-screen text-center font-extralight;
+    @apply bg-surface text-foreground min-h-screen text-center font-extralight text-balance;
   }
 
   a {
@@ -84,11 +84,11 @@
   }
 
   #home h1 {
-    @apply text-brand text-7xl;
+    @apply text-brand text-6xl;
   }
 
   #home > p {
-    @apply max-w-2xl leading-relaxed text-pretty;
+    @apply max-w-2xl leading-relaxed;
   }
 
   #home > p:nth-of-type(1) {
@@ -113,8 +113,8 @@
     @apply mx-auto max-w-4xl px-5 py-20 sm:py-24;
   }
 
-  #products,
   #approach,
+  #projects,
   #contact {
     @apply border-border border-t;
 
@@ -124,15 +124,18 @@
   }
 
   #work h2,
-  #products h2,
+  #projects h2,
   #approach h2 {
     @apply mb-4 text-left text-4xl sm:text-5xl;
   }
 
   #work > p,
-  #products > div > p,
+  #projects > div > p,
   #approach > div > p {
-    @apply mb-14 max-w-2xl text-left text-lg text-pretty text-neutral-300;
+    @apply mb-14 max-w-2xl text-left text-lg text-neutral-300;
+  }
+  #approach p + p {
+    @apply mt-2;
   }
 
   /* Commercial work */
@@ -141,7 +144,9 @@
     @apply flex flex-col gap-14;
   }
 
-  .project {
+  .work-item {
+    @apply border-border border-t pt-8;
+
     & a {
       @apply flex flex-col items-start gap-5 text-inherit no-underline;
 
@@ -181,13 +186,13 @@
     }
   }
 
-  /* Independent products */
+  /* Independent projects */
 
-  #products > div > div {
+  #projects > div > div {
     @apply flex flex-col gap-12;
   }
 
-  .product {
+  .project {
     @apply border-border border-t pt-8;
 
     &:first-child {
@@ -205,11 +210,11 @@
     }
   }
 
-  .product-meta {
+  .project-meta {
     @apply text-meta text-muted mb-4;
   }
 
-  .product-links {
+  .project-links {
     @apply mt-4 flex flex-wrap gap-6 text-base;
   }
 
@@ -224,7 +229,7 @@
   }
 
   #approach p {
-    @apply text-pretty text-neutral-300;
+    @apply text-neutral-300;
   }
 
   #approach a {
@@ -242,19 +247,19 @@
   }
 
   #contact h2 {
-    @apply text-4xl sm:text-5xl;
+    @apply text-4xl;
   }
 
   #contact > div > p:nth-of-type(1) a {
-    @apply text-2xl sm:text-3xl;
+    @apply text-4xl sm:text-5xl;
   }
 
   #contact > div > p:nth-of-type(2) a {
-    @apply text-xl sm:text-2xl;
+    @apply text-3xl sm:text-4xl;
   }
 
   #contact > div > p:nth-of-type(3) {
-    @apply mt-2 flex flex-wrap justify-center gap-x-3 gap-y-2 text-lg;
+    @apply mt-2 flex flex-wrap justify-center gap-x-3 gap-y-2 text-2xl;
   }
 
   /* Footer */
