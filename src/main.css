@@ -21,25 +21,19 @@
   }
 
   a {
-    color: var(--color-brand);
-    text-decoration: none;
+    @apply text-brand no-underline;
   }
 
   a:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--color-foreground);
-    text-underline-offset: 0.18em;
+    @apply decoration-foreground underline underline-offset-[0.18em];
   }
 
   a:focus-visible {
-    outline: 2px solid var(--color-foreground);
-    outline-offset: 4px;
-    border-radius: 2px;
+    @apply outline-foreground rounded-sm outline-2 outline-offset-4;
   }
 
   ::selection {
-    background-color: var(--color-brand);
-    color: var(--color-foreground);
+    @apply bg-brand text-foreground;
   }
 
   section[id],
@@ -52,23 +46,11 @@
   /* Skip link */
 
   .skip-link {
-    position: fixed;
-    top: 0.75rem;
-    left: 0.75rem;
-    z-index: 50;
-    transform: translateY(-200%);
-    border-radius: 4px;
-    background-color: var(--color-foreground);
-    color: var(--color-surface);
-    padding: 0.6rem 1rem;
-    font-weight: 400;
-    transition: transform 0.15s ease-out;
+    @apply bg-foreground text-surface fixed top-3 left-3 z-50 -translate-y-[200%] rounded px-4 py-2.5 font-normal transition-transform duration-150 ease-out;
   }
 
   .skip-link:focus {
-    transform: none;
-    outline: 2px solid var(--color-brand);
-    outline-offset: 2px;
+    @apply outline-brand translate-none outline-2 outline-offset-2;
   }
 
   /* Site navigation */
@@ -168,20 +150,15 @@
   }
 
   .project a {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.25rem;
-    color: inherit;
+    @apply flex flex-col items-start gap-5 text-inherit;
   }
 
   .project a:hover {
-    text-decoration: none;
+    @apply no-underline;
   }
 
   .project .description {
-    width: 100%;
-    text-align: left;
+    @apply w-full text-left;
   }
 
   .project h3 {
@@ -191,38 +168,27 @@
   }
 
   .project .year {
-    margin-bottom: 0.9rem;
-    font-size: var(--text-meta);
-    color: var(--color-muted);
+    @apply text-meta text-muted mb-4;
   }
 
   .project p {
-    margin: 0.5rem 0;
-    line-height: 1.65;
+    @apply my-2 leading-relaxed;
   }
 
   .project .visit {
-    margin-top: 1rem;
-    font-size: var(--text-meta);
-    color: var(--color-brand);
+    @apply text-meta text-brand mt-4;
   }
 
   .project a:hover .visit {
-    text-decoration: underline;
-    text-decoration-color: var(--color-foreground);
-    text-underline-offset: 0.18em;
+    @apply decoration-foreground underline underline-offset-[0.18em];
   }
 
   .project img {
-    width: 100%;
-    height: auto;
-    border: 1px solid var(--color-border-subtle);
-    border-radius: var(--radius-2xl);
+    @apply border-border-subtle h-auto w-full rounded-2xl border;
   }
 
   .project a:focus-visible img {
-    outline: 2px solid var(--color-foreground);
-    outline-offset: 4px;
+    @apply outline-foreground outline-2 outline-offset-4;
   }
 
   /* Independent products */
@@ -232,13 +198,11 @@
   }
 
   .product {
-    border-top: 1px solid var(--color-border);
-    padding-top: 2rem;
+    @apply border-border border-t pt-8;
   }
 
   .product:first-child {
-    border-top: 0;
-    padding-top: 0;
+    @apply border-t-0 pt-0;
   }
 
   .product h3 {
@@ -248,22 +212,15 @@
   }
 
   .product-meta {
-    margin-bottom: 0.9rem;
-    font-size: var(--text-meta);
-    color: var(--color-muted);
+    @apply text-meta text-muted mb-4;
   }
 
   .product p {
-    line-height: 1.65;
-    text-align: left;
+    @apply text-left leading-relaxed;
   }
 
   .product-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-top: 1rem;
-    font-size: 1rem;
+    @apply mt-4 flex flex-wrap gap-6 text-base;
   }
 
   /* Approach */
@@ -285,9 +242,7 @@
   }
 
   .approach-heading {
-    margin-bottom: 0.5rem;
-    font-size: var(--text-approach-heading);
-    color: var(--color-foreground);
+    @apply text-approach-heading text-foreground mb-2;
   }
 
   /* Contact */
@@ -319,7 +274,7 @@
   }
 
   footer a {
-    display: inline-block;
+    @apply inline-block;
   }
 
   footer img {
@@ -347,16 +302,11 @@
 /* Scroll reveal: only active when JavaScript is available */
 
 .js .reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  transition:
-    opacity 0.6s ease-out,
-    transform 0.6s ease-out;
+  @apply translate-y-3.5 opacity-0 transition duration-500 ease-out;
 }
 
 .js .reveal.reveal-active {
-  opacity: 1;
-  transform: none;
+  @apply translate-none opacity-100;
 }
 
 /* Reduced motion */
