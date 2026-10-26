@@ -1,35 +1,45 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand: #f00;
+  --color-surface: #000;
+  --color-foreground: #fff;
+  --color-muted: #a3a3a3;
+  --color-border: rgb(255 255 255 / 0.15);
+  --color-border-subtle: rgb(255 255 255 / 0.12);
+  --text-meta: 0.95rem;
+  --text-approach-heading: 1.2rem;
+}
+
 @layer base {
   html {
-    @apply min-h-screen scroll-smooth;
-    background-color: #000;
+    @apply bg-surface min-h-screen scroll-smooth;
   }
 
   body {
-    @apply min-h-screen bg-black text-center font-extralight text-white;
+    @apply bg-surface text-foreground min-h-screen text-center font-extralight;
   }
 
   a {
-    color: #f00;
+    color: var(--color-brand);
     text-decoration: none;
   }
 
   a:hover {
     text-decoration: underline;
-    text-decoration-color: #fff;
+    text-decoration-color: var(--color-foreground);
     text-underline-offset: 0.18em;
   }
 
   a:focus-visible {
-    outline: 2px solid #fff;
+    outline: 2px solid var(--color-foreground);
     outline-offset: 4px;
     border-radius: 2px;
   }
 
   ::selection {
-    background-color: #f00;
-    color: #fff;
+    background-color: var(--color-brand);
+    color: var(--color-foreground);
   }
 
   section[id],
@@ -48,8 +58,8 @@
     z-index: 50;
     transform: translateY(-200%);
     border-radius: 4px;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--color-foreground);
+    color: var(--color-surface);
     padding: 0.6rem 1rem;
     font-weight: 400;
     transition: transform 0.15s ease-out;
@@ -57,7 +67,7 @@
 
   .skip-link:focus {
     transform: none;
-    outline: 2px solid #f00;
+    outline: 2px solid var(--color-brand);
     outline-offset: 2px;
   }
 
@@ -72,7 +82,7 @@
   }
 
   .site-nav a:hover {
-    @apply text-white;
+    @apply text-foreground;
   }
 
   /* Hero */
@@ -98,7 +108,7 @@
   }
 
   #home h1 {
-    @apply text-7xl text-red-500;
+    @apply text-brand text-7xl;
   }
 
   #home > p {
@@ -130,7 +140,7 @@
   #products,
   #approach,
   #contact {
-    @apply border-t border-white/15;
+    @apply border-border border-t;
   }
 
   #products > div,
@@ -182,8 +192,8 @@
 
   .project .year {
     margin-bottom: 0.9rem;
-    font-size: 0.95rem;
-    color: #a3a3a3;
+    font-size: var(--text-meta);
+    color: var(--color-muted);
   }
 
   .project p {
@@ -193,25 +203,25 @@
 
   .project .visit {
     margin-top: 1rem;
-    font-size: 0.95rem;
-    color: #f00;
+    font-size: var(--text-meta);
+    color: var(--color-brand);
   }
 
   .project a:hover .visit {
     text-decoration: underline;
-    text-decoration-color: #fff;
+    text-decoration-color: var(--color-foreground);
     text-underline-offset: 0.18em;
   }
 
   .project img {
     width: 100%;
     height: auto;
-    border: 1px solid rgb(255 255 255 / 0.12);
-    border-radius: 16px;
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-2xl);
   }
 
   .project a:focus-visible img {
-    outline: 2px solid #fff;
+    outline: 2px solid var(--color-foreground);
     outline-offset: 4px;
   }
 
@@ -222,7 +232,7 @@
   }
 
   .product {
-    border-top: 1px solid rgb(255 255 255 / 0.15);
+    border-top: 1px solid var(--color-border);
     padding-top: 2rem;
   }
 
@@ -239,8 +249,8 @@
 
   .product-meta {
     margin-bottom: 0.9rem;
-    font-size: 0.95rem;
-    color: #a3a3a3;
+    font-size: var(--text-meta);
+    color: var(--color-muted);
   }
 
   .product p {
@@ -276,8 +286,8 @@
 
   .approach-heading {
     margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-    color: #fff;
+    font-size: var(--text-approach-heading);
+    color: var(--color-foreground);
   }
 
   /* Contact */
