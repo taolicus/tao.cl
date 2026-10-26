@@ -1,4 +1,8 @@
-@import "tailwindcss";
+/* Utilities come only from the page markup. Automatic source detection also
+   scans documentation and code comments, so a word like "hidden" in a task
+   note would emit a rule nothing uses. */
+@import "tailwindcss" source(none);
+@source "../index.html";
 
 @theme {
   --color-brand: #f00;
@@ -43,16 +47,6 @@
 }
 
 @layer components {
-  /* Skip link */
-
-  .skip-link {
-    @apply bg-foreground text-surface fixed top-3 left-3 z-50 -translate-y-[200%] rounded px-4 py-2.5 font-normal transition-transform duration-150 ease-out;
-
-    &:focus {
-      @apply outline-brand translate-none outline-2 outline-offset-2;
-    }
-  }
-
   /* Site navigation */
 
   .site-nav {
