@@ -11,6 +11,6 @@ the places that state Tao's current role:
 Historical roles under Selected work keep the titles Tao actually held, such as
 Mid-Level Engineer, Front-end developer, Developer and Web and IoT developer.
 
-The linked CV is a separate document titled _Frontend Software Engineer_; its
-filename and contents use that more specific title and should not be renamed
-without updating the PDF itself.
+The linked CV is titled _Software Engineer_ and uses the filename
+`Tao_Zamorano_Software_Engineer_CV_2026.pdf`, keeping the document consistent
+with the public role title.
