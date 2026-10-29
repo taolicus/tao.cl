@@ -2,7 +2,7 @@
 
 ## What was observed
 
-The site now links to the Product Engineer CV (October 2026) and lists the Hyve
+The site now links to the Frontend Software Engineer CV (October 2026) and lists the Hyve
 Managed Hosting role, so the CV and older resume files are no longer in question.
 The CV records what each employer did in general terms but not what Tao
 personally owned on each portfolio project. The site therefore describes the

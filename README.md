@@ -1,6 +1,6 @@
 # tao.cl
 
-Personal portfolio for [Tao Zamorano](https://tao.cl/), a London-based Product
+Personal portfolio for [Tao Zamorano](https://tao.cl/), a London-based Software
 Engineer with a commercial background in frontend and backend web development.
 
 The site is a single, statically built page. It presents selected commercial
