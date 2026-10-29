@@ -71,7 +71,7 @@
     @apply flex w-full justify-center overflow-clip;
 
     & > div {
-      @apply w-full max-w-40 p-4 sm:max-w-64;
+      @apply w-full max-w-56 p-4 sm:max-w-sm;
     }
   }
 
@@ -84,22 +84,22 @@
   }
 
   #home h1 {
-    @apply text-brand max-w-3xl text-5xl leading-tight sm:text-6xl;
+    @apply text-brand text-6xl;
   }
 
-  .hero-eyebrow {
-    @apply text-meta tracking-[0.18em] text-neutral-400 uppercase;
+  #home > p {
+    @apply max-w-2xl leading-relaxed;
   }
 
-  .hero-deck {
-    @apply max-w-2xl text-lg leading-relaxed text-neutral-300;
+  #home > p:nth-of-type(1) {
+    @apply text-lg text-neutral-300;
   }
 
-  .hero-availability {
+  #home > p:nth-of-type(2) {
     @apply text-base text-neutral-400;
   }
 
-  .hero-links {
+  #home > div:last-child {
     @apply mt-2 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-lg;
 
     & a {

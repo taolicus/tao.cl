@@ -47,9 +47,10 @@ supported by the site or CV.
 
 Implemented locally; not deployed or pushed.
 
-The hero now states the role, specialism, London location and role availability,
-with CV, email, LinkedIn and GitHub calls to action. The page order is Selected
-work → Independent projects → Approach → Contact, and the navigation matches.
+The page order is Selected work → Independent projects → Approach → Contact,
+and the navigation matches. The original hero copy, logo scale and CV/GitHub
+links were restored at Tao's request; the role/availability/CTA rewrite was
+reverted.
 
 The Hyve, Coca-Cola and DataFlow entries were tightened around ownership and
 results, with dates aligned to the CV. The Archetype All Types entry was removed
@@ -65,6 +66,6 @@ and a local Vite preview: section order, hash targets, CV/asset links, generated
 utility CSS and the absence of the invalid `@media source(...)` rule were
 checked. No browser was available in this environment, so phone and desktop
 layout were not checked visually and computed styles were not inspected in a
-browser. The availability line should be confirmed before publication.
+browser.
 
 Deployment remains pending.
