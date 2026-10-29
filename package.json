@@ -1,7 +1,7 @@
 {
   "name": "tao.cl",
   "version": "1.0.0",
-  "description": "Personal portfolio website for Tao Zamorano, Product Engineer.",
+  "description": "Personal portfolio website for Tao Zamorano, Software Engineer.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
