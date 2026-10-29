@@ -188,12 +188,12 @@
     @apply flex flex-col gap-12;
   }
 
+  .project-games {
+    @apply md:border-border grid gap-y-12 md:grid-cols-3 md:gap-x-8 md:gap-y-0 md:border-t md:pt-8;
+  }
+
   .project {
     @apply border-border border-t pt-8;
-
-    &:first-child {
-      @apply border-t-0 pt-0;
-    }
 
     & h3 {
       margin-bottom: 0.25rem;
@@ -210,8 +210,20 @@
     @apply text-meta text-muted mb-4;
   }
 
+  #projects > div > div > .project:first-child {
+    @apply border-t-0 pt-0;
+  }
+
+  .project-games .project {
+    @apply md:flex md:h-full md:flex-col md:border-t-0 md:pt-0;
+  }
+
   .project-links {
-    @apply mt-4 flex flex-wrap gap-6 text-base;
+    @apply mt-4 flex flex-wrap gap-2 text-base;
+  }
+
+  .project-games .project-links {
+    @apply md:mt-auto md:pt-4;
   }
 
   /* Approach */
@@ -240,6 +252,10 @@
 
   #contact > div {
     @apply flex flex-col items-center gap-6 text-center sm:py-28;
+  }
+
+  .contact-portrait {
+    @apply size-40 rounded-full object-cover sm:size-48;
   }
 
   #contact h2 {
