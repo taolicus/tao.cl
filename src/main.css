@@ -215,7 +215,10 @@
   }
 
   .project-games .project {
-    @apply md:flex md:h-full md:flex-col md:border-t-0 md:pt-0;
+    @apply mb-2 md:flex md:h-full md:flex-col md:border-t-0 md:pt-0;
+    p {
+      @apply mb-2;
+    }
   }
 
   .project-links {
