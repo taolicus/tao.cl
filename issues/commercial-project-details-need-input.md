@@ -31,14 +31,15 @@ First-hand contribution evidence has been added for:
 ## What would resolve it
 
 One or two sentences of first-hand contribution detail for Archetype All Types.
+The entry can then be restored to Selected work with a clear statement of what
+Tao owned.
 
 ## Notes from latest review
 
-National Women's Enterprise Week and Archetype UK Digital Team have been
-removed from the portfolio because no first-hand contribution evidence is
-available. Archetype All Types remains until evidence is provided; its
-description will stay at the product/team level and will not invent
-responsibilities, metrics or outcomes.
+National Women's Enterprise Week, Archetype UK Digital Team and Archetype All
+Types have been removed from the portfolio because no first-hand contribution
+evidence is available. The remaining case studies state Tao's role and
+contribution and do not invent responsibilities, metrics or outcomes.
 
 ## Affects
 
