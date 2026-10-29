@@ -74,44 +74,44 @@
   <body>
     <main>
       <header id="home">
-        <!-- The inner wrapper bounds the spinning logo's width; the outer one
-             clips the corners that rotate past that bound. -->
-        <div>
+        <div id="intro">
+          <h1>I'm Tao.</h1>
+          <p>
+            A Software Engineer with 10+ years of experience building for the
+            web, across frontend and backend systems.
+          </p>
           <div>
-            <img
-              id="tao"
-              src="./src/img/tao.svg"
-              alt=""
-              width="512"
-              height="512"
-            />
+            <a href="/Tao_Zamorano_Frontend_Software_Engineer_CV.pdf" download>
+              Download CV
+              <span class="sr-only">(PDF, updated October 2026)</span>
+            </a>
+            <span aria-hidden="true">•</span>
+            <a
+              href="https://github.com/taolicus"
+              target="_blank"
+              rel="noopener"
+            >
+              GitHub
+              <span class="sr-only">(opens in a new tab)</span>
+            </a>
           </div>
+
+          <nav aria-label="Page sections" class="site-nav">
+            <a href="#approach">Approach</a>
+            <a href="#work">Work</a>
+            <a href="#projects">Personal Projects</a>
+            <a href="#contact">Contact</a>
+          </nav>
         </div>
-
-        <h1>I'm Tao.</h1>
-        <p>
-          A Software Engineer with 10+ years of experience building for the web,
-          across frontend and backend systems.
-        </p>
-
-        <div>
-          <a href="/Tao_Zamorano_Frontend_Software_Engineer_CV.pdf" download>
-            Download CV
-            <span class="sr-only">(PDF, updated October 2026)</span>
-          </a>
-          <span aria-hidden="true">•</span>
-          <a href="https://github.com/taolicus" target="_blank" rel="noopener">
-            GitHub
-            <span class="sr-only">(opens in a new tab)</span>
-          </a>
+        <div id="logo-container">
+          <img
+            id="tao"
+            src="./src/img/tao.svg"
+            alt=""
+            width="512"
+            height="512"
+          />
         </div>
-
-        <nav aria-label="Page sections" class="site-nav">
-          <a href="#approach">Approach</a>
-          <a href="#work">Work</a>
-          <a href="#projects">Personal Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
       </header>
 
       <section id="approach">

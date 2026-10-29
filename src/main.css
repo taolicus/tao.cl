@@ -63,7 +63,7 @@
 
   /* Hero */
 
-  #home {
+  /* #home {
     @apply flex min-h-screen flex-col items-center justify-center gap-4 px-5 py-12 sm:py-16;
   }
 
@@ -73,7 +73,7 @@
     & > div {
       @apply w-full max-w-56 p-4 sm:max-w-sm;
     }
-  }
+  } */
 
   #tao {
     @apply h-auto w-full;
@@ -100,7 +100,7 @@
   }
 
   #home > div:last-child {
-    @apply mt-2 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-lg;
+    /* @apply mt-2 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-lg; */
 
     & a {
       @apply font-normal;
@@ -323,5 +323,74 @@
   .js .reveal {
     opacity: 1;
     transform: none;
+  }
+}
+
+header {
+  @apply relative flex min-h-screen;
+}
+
+#intro {
+  @apply flex flex-col items-start justify-center p-8 text-left text-2xl;
+
+  h1 {
+    @apply text-brand text-9xl;
+  }
+}
+
+#logo-container {
+  @apply relative flex h-screen w-screen justify-end overflow-clip;
+}
+
+#tao {
+  @apply absolute top-0 h-screen w-auto max-w-none;
+}
+
+@media (orientation: portrait) {
+  header {
+    @apply flex-col;
+  }
+
+  #logo-container {
+    @apply h-[50svh] w-full grow;
+  }
+
+  #tao {
+    @apply top-0 left-1/2 h-auto w-full max-w-none;
+    transform-origin: center;
+    animation: spin-portrait 60s linear infinite reverse;
+  }
+
+  #intro {
+    @apply order-2 w-full flex-1 justify-start;
+  }
+
+  #intro h1 {
+    @apply text-6xl;
+  }
+}
+
+@keyframes spin-portrait {
+  from {
+    transform: translate(-50%, -25%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -25%) rotate(360deg);
+  }
+}
+
+@media (orientation: landscape) {
+  #tao {
+    transform-origin: center;
+    animation: spin-landscape 60s linear infinite reverse;
+  }
+}
+
+@keyframes spin-landscape {
+  from {
+    transform: translateX(16.6667%) scale(1.25) rotate(0deg);
+  }
+  to {
+    transform: translateX(16.6667%) scale(1.25) rotate(360deg);
   }
 }
