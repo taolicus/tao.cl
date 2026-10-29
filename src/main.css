@@ -50,7 +50,7 @@
   /* Site navigation */
 
   .site-nav {
-    @apply mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-base;
+    @apply mt-6 flex flex-wrap justify-between gap-x-6 gap-y-2 text-base;
 
     & a {
       @apply text-neutral-400;
@@ -327,7 +327,7 @@
 }
 
 header {
-  @apply relative flex min-h-screen;
+  @apply relative flex h-screen;
 }
 
 #intro {
@@ -367,6 +367,10 @@ header {
 
   #intro h1 {
     @apply text-6xl;
+  }
+
+  .site-nav {
+    @apply w-full;
   }
 }
 
