@@ -68,6 +68,7 @@ Left coherent: the server's build copy at `/home/tao/tao.cl` (the tree that
 produced the broken deploy) was pulled to `9183a79` and rebuilt, so a repeat
 build there now produces working CSS.
 
-Follow-up: `issues/github-actions-deploy-missing-ssh-secret.md` records that
-the CI deploy workflow fails on every push because `SSH_PRIVATE_KEY` is empty,
-which is why production is updated by hand.
+Follow-up resolved in
+[github-actions-deploy-missing-ssh-secret.md](github-actions-deploy-missing-ssh-secret.md):
+the unconfigured deploy workflow was removed. Production is updated with
+`scripts/deploy.sh`.
