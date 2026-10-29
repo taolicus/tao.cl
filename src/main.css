@@ -327,7 +327,7 @@
 }
 
 header {
-  @apply relative flex h-screen;
+  @apply relative flex h-svh;
 }
 
 #intro {
