@@ -26,38 +26,47 @@ async function collectLinks(page) {
   );
 }
 
-test("all internal links and assets resolve", async ({ page, request }) => {
-  await page.goto("/");
+const PAGES = ["/", "/work/myhyve/", "/work/share-a-coke/"];
 
-  const pageUrl = new URL(page.url());
-  const internal = new Set();
+for (const path of PAGES) {
+  test(`all internal links and assets resolve on ${path}`, async ({
+    page,
+    request,
+  }) => {
+    await page.goto(path);
 
-  for (const value of await collectLinks(page)) {
-    const url = new URL(value, pageUrl);
-    if (url.origin !== pageUrl.origin) continue;
-    if (url.hash && url.pathname === pageUrl.pathname) continue;
-    internal.add(url.pathname + url.search);
-  }
+    const pageUrl = new URL(page.url());
+    const internal = new Set();
 
-  for (const path of internal) {
-    const response = await request.get(path);
-    expect(response.status(), `${path} should resolve`).toBeLessThan(400);
-  }
-});
+    for (const value of await collectLinks(page)) {
+      const url = new URL(value, pageUrl);
+      if (url.origin !== pageUrl.origin) continue;
+      if (url.hash && url.pathname === pageUrl.pathname) continue;
+      internal.add(url.pathname + url.search);
+    }
 
-test("all in-page anchors have a target", async ({ page }) => {
-  await page.goto("/");
+    for (const internalPath of internal) {
+      const response = await request.get(internalPath);
+      expect(response.status(), `${internalPath} should resolve`).toBeLessThan(
+        400,
+      );
+    }
+  });
 
-  const missing = await page.$$eval('a[href^="#"]', (links) =>
-    links
-      .map((link) => link.getAttribute("href"))
-      .filter(
-        (href) => href.length > 1 && !document.getElementById(href.slice(1)),
-      ),
-  );
+  test(`all in-page anchors have a target on ${path}`, async ({ page }) => {
+    await page.goto(path);
 
-  expect(missing).toEqual([]);
-});
+    const missing = await page.$$eval('a[href^="#"]', (links) =>
+      links
+        .map((link) => link.getAttribute("href"))
+        .filter(
+          (href) => href.length > 1 && !document.getElementById(href.slice(1)),
+        ),
+    );
+
+    expect(missing).toEqual([]);
+  });
+}
 
 test("external links are reachable", async ({ page, request }) => {
   test.skip(

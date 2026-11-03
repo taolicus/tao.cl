@@ -3,9 +3,10 @@
 Personal portfolio for [Tao Zamorano](https://tao.cl/), a London-based Software
 Engineer with a commercial background in frontend and backend web development.
 
-The site is a single, statically built page. It presents selected commercial
-work, independent products, an approach to building software and a short
-career background, then links to the CV, GitHub, LinkedIn and contact details.
+The site is statically built. The homepage presents selected commercial work,
+independent products, an approach to building software and contact details;
+the first two Selected work cards link to project pages for MyHyve Ticketing
+Portal and Coca-Cola Share a Coke.
 
 ## Stack
 
@@ -23,7 +24,8 @@ as lazy-loaded WebP with reserved dimensions.
 ## Project layout
 
 ```text
-index.html              The page content and metadata
+index.html              The homepage content and metadata
+work/                   Static project pages for selected work
 src/main.css            Tailwind import, link styles, layout and motion
 src/main.js             Scroll reveal with an IntersectionObserver
 src/img/                Logo, social-card source and portfolio screenshots
@@ -109,6 +111,6 @@ The site code is released under the ISC licence; see [LICENSE](LICENSE).
 The ISC licence does **not** cover the portfolio screenshots, client names,
 logos, campaign imagery or other third-party marks shown on the page. Those
 remain the property of their respective owners and are included only to
-describe work Tao delivered. Coca-Cola Share a Coke and National Women's
-Enterprise Week link to archived copies because the original live pages are no
-longer available.
+describe work Tao delivered. The Coca-Cola Share a Coke project page uses the
+campaign screenshot held in the portfolio because the original campaign page is
+no longer live.

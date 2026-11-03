@@ -3,6 +3,7 @@
    note would emit a rule nothing uses. */
 @import "tailwindcss" source(none);
 @source "../index.html";
+@source "../work/**/*.html";
 
 @theme {
   /* OKLCH equivalents of the existing palette. The extra precision on the
@@ -137,6 +138,115 @@
       align-items: start;
       gap: 2rem;
     }
+  }
+
+  /* Workflow diagram */
+
+  .workflow {
+    @apply border-border-subtle rounded-2xl border p-5 text-left;
+  }
+
+  .workflow-title {
+    @apply text-body text-sm font-normal tracking-[0.12em] uppercase;
+  }
+
+  .workflow-steps {
+    @apply mt-4 grid list-none gap-3 p-0;
+  }
+
+  .case-workflow .workflow-steps {
+    @apply sm:grid-cols-3;
+  }
+
+  .workflow-step {
+    @apply border-border-subtle bg-foreground/5 rounded-xl border p-4;
+  }
+
+  .workflow-step-label {
+    @apply text-brand mb-2 text-sm font-normal tracking-[0.08em] uppercase;
+  }
+
+  .workflow-step p {
+    @apply text-body text-sm leading-relaxed;
+  }
+
+  .workflow-step p + p {
+    @apply mt-1;
+  }
+
+  .workflow-note {
+    @apply text-muted mt-4 text-xs;
+  }
+
+  /* Project pages */
+
+  .case-header {
+    @apply border-border flex h-auto flex-row flex-wrap items-center justify-between gap-4 border-b px-5 py-5 text-left;
+  }
+
+  .case-back {
+    @apply text-muted text-base;
+  }
+
+  .case-nav {
+    @apply justify-start gap-x-5;
+  }
+
+  .case-study {
+    @apply mx-auto max-w-3xl px-5 py-16 text-left sm:py-20;
+  }
+
+  .case-kicker,
+  .case-status {
+    @apply text-brand text-sm font-normal tracking-[0.16em] uppercase;
+  }
+
+  .case-status {
+    @apply border-brand/50 inline-block rounded-full border px-3 py-1;
+  }
+
+  .case-study h1 {
+    @apply mt-3 text-4xl leading-tight sm:text-5xl;
+  }
+
+  .case-meta {
+    @apply text-meta text-muted mt-4;
+  }
+
+  .case-lede {
+    @apply text-body mt-8 text-lg leading-relaxed;
+  }
+
+  .case-study h2 {
+    @apply text-foreground mt-12 text-2xl leading-tight;
+  }
+
+  .case-copy {
+    @apply text-body mt-4 leading-relaxed;
+  }
+
+  .case-study ul {
+    @apply text-body mt-4 list-disc space-y-2 pl-5 leading-relaxed;
+  }
+
+  .case-figure {
+    @apply border-border-subtle mt-10 rounded-2xl border p-3 sm:p-4;
+  }
+
+  .case-figure img {
+    @apply border-border-subtle h-auto w-full rounded-xl border;
+  }
+
+  .case-caption {
+    @apply text-muted mt-4 text-sm leading-relaxed;
+  }
+
+  .case-workflow {
+    @apply mt-10;
+  }
+
+  .case-note {
+    @apply text-muted border-border mt-12 border-t pt-6 text-sm;
   }
 
   /* Independent projects */

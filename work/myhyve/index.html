@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyHyve Ticketing Portal — Tao Zamorano</title>
+    <meta
+      name="description"
+      content="Case study: a monthly support-ticket automation for stray orders at Hyve Managed Hosting, and the Angular 19→21 modernisation of the MyHyve portal." />
+    <meta name="author" content="Tao Zamorano" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="canonical" href="https://tao.cl/work/myhyve/" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Tao Zamorano" />
+    <meta
+      property="og:title"
+      content="MyHyve Ticketing Portal — Tao Zamorano" />
+    <meta
+      property="og:description"
+      content="Case study: a monthly support-ticket automation for stray orders at Hyve Managed Hosting, and the Angular 19→21 modernisation of the MyHyve portal." />
+    <meta property="og:url" content="https://tao.cl/work/myhyve/" />
+    <meta property="og:locale" content="en_GB" />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="MyHyve Ticketing Portal — Tao Zamorano" />
+    <meta
+      name="twitter:description"
+      content="Case study: a monthly support-ticket automation for stray orders at Hyve Managed Hosting, and the Angular 19→21 modernisation of the MyHyve portal." />
+
+    <link rel="icon" type="image/svg+xml" href="/src/img/tao.svg" />
+    <link rel="stylesheet" href="/src/main.css" />
+  </head>
+
+  <body>
+    <header class="case-header">
+      <a class="case-back" href="/#work">← Selected work</a>
+      <nav aria-label="Page sections" class="site-nav case-nav">
+        <a href="/">Home</a>
+        <a href="/#projects">Projects</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="case-study">
+      <article>
+        <p class="case-kicker">Case study</p>
+        <h1>MyHyve Ticketing Portal</h1>
+        <p class="case-meta">
+          Mid-Level Engineer at Hyve Managed Hosting · Sep 2025 - Oct 2026
+        </p>
+        <p class="case-lede">
+          A monthly support-ticket automation for stray orders at Hyve Managed
+          Hosting, built into the production Angular and C# ticketing portal.
+        </p>
+
+        <h2>The problem</h2>
+        <p class="case-copy">
+          Stray orders needed a monthly check to become support tickets. Some
+          maintenance tasks were recorded under the wrong category, so the team
+          did not see them as maintenance work.
+        </p>
+
+        <h2>What I built</h2>
+        <p class="case-copy">
+          I built and deployed the workflow across the Angular portal and its C#
+          backend. On each monthly run it checks for stray orders, creates a
+          ticket for each one and sends the ticket to support review. Customer
+          Experience validated the workflow after rollout.
+        </p>
+
+        <figure
+          class="workflow case-workflow"
+          aria-labelledby="case-workflow-title">
+          <figcaption id="case-workflow-title" class="workflow-title">
+            Monthly stray-order workflow
+          </figcaption>
+          <ol class="workflow-steps">
+            <li class="workflow-step">
+              <p class="workflow-step-label">1. Monthly check</p>
+              <p>Stray order #1042</p>
+              <p>Sample customer</p>
+            </li>
+            <li class="workflow-step">
+              <p class="workflow-step-label">2. Ticket creation</p>
+              <p>Ticket #1042 created</p>
+              <p>Queued for support</p>
+            </li>
+            <li class="workflow-step">
+              <p class="workflow-step-label">3. Support review</p>
+              <p>Stray order reviewed</p>
+              <p>Maintenance task flagged</p>
+            </li>
+          </ol>
+          <p class="workflow-note">
+            Illustrative workflow with fictional data.
+          </p>
+        </figure>
+
+        <h2>After rollout</h2>
+        <p class="case-copy">
+          The workflow surfaced maintenance work the team had been missing. It
+          also gives each stray order a repeatable route into a support ticket
+          and a support-review step.
+        </p>
+
+        <h2>Separate example: modernising the portal</h2>
+        <p class="case-copy">
+          The monthly workflow sat alongside a wider modernisation of the same
+          portal. I led the Angular 19→21 upgrade and cut npm audit findings
+          from 50+ to under 5, including three of four critical issues. The
+          portal adopted Angular signals and rxResource, and I replaced legacy
+          Sass with Tailwind. I also reorganised related components into
+          feature-oriented modules.
+        </p>
+
+        <p class="case-note">
+          This case study uses only details that can be stated without internal
+          customer, order or ticket data.
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <p>
+        <a href="/" aria-label="Tao Zamorano home">
+          <img
+            id="signature"
+            src="/src/img/tao.svg"
+            alt=""
+            width="512"
+            height="512" />
+        </a>
+      </p>
+      <p>© 2026 Tao Zamorano</p>
+    </footer>
+  </body>
+</html>
