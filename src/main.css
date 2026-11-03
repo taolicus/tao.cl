@@ -5,10 +5,13 @@
 @source "../index.html";
 
 @theme {
-  --color-brand: #f00;
-  --color-surface: #000;
-  --color-foreground: #fff;
-  --color-muted: #a3a3a3;
+  /* OKLCH equivalents of the existing palette. The extra precision on the
+     accent keeps #f00 intact; rounding the hue to 29.2 shifts the blue channel. */
+  --color-brand: oklch(62.796% 0.25768 29.234);
+  --color-surface: oklch(0% 0 0);
+  --color-foreground: oklch(100% 0 0);
+  --color-body: oklch(87% 0 0);
+  --color-muted: oklch(71.5% 0 0);
   --color-border: rgb(255 255 255 / 0.15);
   --color-border-subtle: rgb(255 255 255 / 0.12);
   --text-meta: 0.95rem;
@@ -37,7 +40,7 @@
   }
 
   ::selection {
-    @apply bg-brand text-foreground;
+    @apply bg-brand text-surface;
   }
 
   section[id],
@@ -53,57 +56,11 @@
     @apply flex flex-wrap justify-between gap-x-6 gap-y-2 text-base;
 
     & a {
-      @apply text-neutral-400;
+      @apply text-muted;
 
       &:hover {
         @apply text-foreground;
       }
-    }
-  }
-
-  /* Hero */
-
-  /* #home {
-    @apply flex min-h-screen flex-col items-center justify-center gap-4 px-5 py-12 sm:py-16;
-  }
-
-  #home > div:first-child {
-    @apply flex w-full justify-center overflow-clip;
-
-    & > div {
-      @apply w-full max-w-56 p-4 sm:max-w-sm;
-    }
-  } */
-
-  #tao {
-    @apply h-auto w-full;
-  }
-
-  #signature {
-    @apply h-auto w-12;
-  }
-
-  #home h1 {
-    @apply text-brand text-6xl;
-  }
-
-  #home > p {
-    @apply max-w-2xl leading-relaxed;
-  }
-
-  #home > p:nth-of-type(1) {
-    @apply text-lg text-neutral-300;
-  }
-
-  #home > p:nth-of-type(2) {
-    @apply text-base text-neutral-400;
-  }
-
-  #home > div:last-child {
-    /* @apply mt-2 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-lg; */
-
-    & a {
-      @apply font-normal;
     }
   }
 
@@ -132,7 +89,7 @@
   #work > p,
   #projects > div > p,
   #approach > div > p {
-    @apply mb-14 max-w-2xl text-left text-lg text-neutral-300;
+    @apply text-body mb-14 max-w-2xl text-left text-lg;
   }
   #approach p + p {
     @apply mt-2;
@@ -240,7 +197,7 @@
   }
 
   #approach p {
-    @apply text-neutral-300;
+    @apply text-body;
   }
 
   #approach a {
@@ -266,11 +223,15 @@
   }
 
   .contact-intro {
-    @apply max-w-2xl text-lg text-neutral-300;
+    @apply text-body max-w-2xl text-lg;
+  }
+
+  .contact-primary {
+    @apply max-w-full;
   }
 
   .contact-primary a {
-    @apply text-4xl sm:text-5xl;
+    @apply text-4xl break-words sm:text-5xl;
   }
 
   .contact-links {
@@ -278,7 +239,7 @@
   }
 
   .contact-phone {
-    @apply text-meta text-neutral-400;
+    @apply text-meta text-muted;
   }
 
   /* Footer */
@@ -295,21 +256,100 @@
     }
 
     & > p:last-child {
-      @apply text-sm text-neutral-400;
+      @apply text-muted text-sm;
     }
   }
-}
 
-/* Logo animation */
+  /* Logo animation */
 
-#tao,
-#signature {
-  animation: spin 60s linear infinite reverse;
-}
+  #tao,
+  #signature {
+    animation: spin 60s linear infinite reverse;
+  }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Hero */
+
+  header {
+    @apply relative flex h-svh;
+  }
+
+  #intro {
+    @apply flex flex-col items-start justify-center gap-4 p-8 text-left text-2xl leading-9;
+
+    h1 {
+      @apply text-brand text-9xl;
+    }
+  }
+
+  #logo-container {
+    @apply relative flex h-svh w-screen justify-end overflow-clip;
+  }
+
+  #tao {
+    @apply absolute top-0 h-svh w-auto max-w-none;
+  }
+
+  @media (orientation: portrait) {
+    header {
+      @apply flex-col;
+    }
+
+    #logo-container {
+      @apply h-[50svh] w-full grow;
+    }
+
+    #tao {
+      @apply top-0 left-1/2 h-auto w-full max-w-none scale-110;
+      transform-origin: center;
+      animation: spin-portrait 60s linear infinite reverse;
+    }
+
+    #intro {
+      @apply order-2 w-full flex-1 justify-start;
+    }
+
+    #intro h1 {
+      @apply text-6xl;
+    }
+
+    .site-nav {
+      @apply w-full;
+    }
+  }
+
+  @keyframes spin-portrait {
+    from {
+      transform: translate(-50%, -25%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -25%) rotate(360deg);
+    }
+  }
+
+  @media (orientation: landscape) {
+    #tao {
+      transform-origin: center;
+      animation: spin-landscape 60s linear infinite reverse;
+    }
+
+    #intro h1 {
+      transform: translateX(-0.6rem);
+    }
+  }
+
+  @keyframes spin-landscape {
+    from {
+      transform: translateX(16.6667%) scale(1.25) rotate(0deg);
+    }
+    to {
+      transform: translateX(16.6667%) scale(1.25) rotate(360deg);
+    }
   }
 }
 
@@ -342,82 +382,5 @@
   .js .reveal {
     opacity: 1;
     transform: none;
-  }
-}
-
-header {
-  @apply relative flex h-svh;
-}
-
-#intro {
-  @apply flex flex-col items-start justify-center gap-4 p-8 text-left text-2xl leading-9;
-
-  h1 {
-    @apply text-brand text-9xl;
-  }
-}
-
-#logo-container {
-  @apply relative flex h-screen w-screen justify-end overflow-clip;
-}
-
-#tao {
-  @apply absolute top-0 h-screen w-auto max-w-none;
-}
-
-@media (orientation: portrait) {
-  header {
-    @apply flex-col;
-  }
-
-  #logo-container {
-    @apply h-[50svh] w-full grow;
-  }
-
-  #tao {
-    @apply top-0 left-1/2 h-auto w-full max-w-none scale-110;
-    transform-origin: center;
-    animation: spin-portrait 60s linear infinite reverse;
-  }
-
-  #intro {
-    @apply order-2 w-full flex-1 justify-start;
-  }
-
-  #intro h1 {
-    @apply text-6xl;
-  }
-
-  .site-nav {
-    @apply w-full;
-  }
-}
-
-@keyframes spin-portrait {
-  from {
-    transform: translate(-50%, -25%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -25%) rotate(360deg);
-  }
-}
-
-@media (orientation: landscape) {
-  #tao {
-    transform-origin: center;
-    animation: spin-landscape 60s linear infinite reverse;
-  }
-
-  #intro h1 {
-    transform: translateX(-0.6rem);
-  }
-}
-
-@keyframes spin-landscape {
-  from {
-    transform: translateX(16.6667%) scale(1.25) rotate(0deg);
-  }
-  to {
-    transform: translateX(16.6667%) scale(1.25) rotate(360deg);
   }
 }
