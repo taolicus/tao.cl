@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "images": "node scripts/generate-responsive-images.mjs",
+    "test": "playwright test",
+    "test:links": "playwright test tests/links.spec.js"
   },
   "repository": {
     "type": "git",

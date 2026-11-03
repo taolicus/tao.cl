@@ -28,7 +28,8 @@ src/main.css            Tailwind import, link styles, layout and motion
 src/main.js             Scroll reveal with an IntersectionObserver
 src/img/                Logo, social-card source and portfolio screenshots
 public/                 Current CV, robots.txt, sitemap.xml and social image
-scripts/                Deployment helpers
+scripts/                Deployment helpers and responsive image generation
+tests/                  Playwright link checks
 workflow/               Agent-assisted work rules, templates and lint
 issues/, tasks/, features/
                         Work items and durable project notes
@@ -53,6 +54,19 @@ npm run preview
 `npm run build` writes the static site to `dist/`; `npm run preview` serves that
 build locally. The only build output that should be published is the contents of
 `dist/`.
+
+`npm test` builds the site and runs the Playwright link checks against the
+preview. It verifies internal links, assets, `srcset` candidates and in-page
+anchors. Third-party links are checked only when explicitly requested, because
+remote sites can block automated requests:
+
+```sh
+CHECK_EXTERNAL_LINKS=1 npm test
+```
+
+The portfolio screenshots use committed 800w and 1200w WebP variants. If a
+source screenshot changes, regenerate them with `npm run images` (requires the
+Playwright Chromium browser).
 
 ## Deployment
 
