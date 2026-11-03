@@ -13,7 +13,7 @@ import path from "node:path";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const imageDir = path.join(root, "src", "img", "portfolio");
-const names = ["myhyve", "sac", "dataflow"];
+const names = ["myhyve", "sac", "alltypes", "dataflow"];
 const widths = [800, 1200];
 
 const browser = await chromium.launch();
