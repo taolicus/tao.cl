@@ -85,6 +85,10 @@ current branch, then rsyncs only `dist/` to `/var/www/tao.cl` on the remote
 server. The repository itself does not need to live on the server. It assumes
 an SSH host alias `tao` is configured locally.
 
+The nginx vhost is configured outside this repository. It compresses CSS, JS,
+SVG and XML, serves `/assets/` with a one-year immutable cache, and serves the
+HTML document with `no-cache` so a deploy is visible immediately.
+
 `robots.txt` and `sitemap.xml` are copied from `public/` and assume the site is
 served from `https://tao.cl/`. The social image at `public/og.png` was rendered
 from `src/img/og.svg` with `rsvg-convert -w 1200 -h 630`.
