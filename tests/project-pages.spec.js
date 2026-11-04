@@ -3,12 +3,12 @@ import { test, expect } from "@playwright/test";
 const PAGES = [
   {
     path: "/work/myhyve/",
-    heading: "MyHyve Ticketing Portal",
+    heading: "Modernising the MyHyve Ticketing Portal",
     label: "Case study",
   },
   {
     path: "/work/share-a-coke/",
-    heading: "Coca-Cola Share a Coke",
+    heading: "Building the Share a Coke Customisation Experience",
     label: "Completed campaign",
   },
 ];
@@ -63,13 +63,28 @@ test("MyHyve workflow diagram names its three steps", async ({ page }) => {
   const steps = page.locator(".case-workflow .workflow-step-label");
   await expect(steps).toHaveText([
     "1. Monthly check",
-    "2. Ticket creation",
+    "2. One monthly ticket",
     "3. Support review",
   ]);
   await expect(
     page.getByText("Illustrative workflow with fictional data."),
   ).toBeVisible();
 });
+
+for (const projectPage of PAGES) {
+  test(`${projectPage.heading} shows highlights and a return link`, async ({
+    page,
+  }) => {
+    await page.goto(projectPage.path);
+
+    await expect(
+      page.getByRole("list", { name: "At a glance" }).locator("li"),
+    ).toHaveCount(3);
+    await expect(
+      page.getByRole("link", { name: "← Back to selected work" }),
+    ).toHaveAttribute("href", "/#work");
+  });
+}
 
 test("Share a Coke campaign screenshot loads at project-page width", async ({
   page,

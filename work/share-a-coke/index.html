@@ -3,29 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coca-Cola Share a Coke — Tao Zamorano</title>
+    <title>
+      Building the Share a Coke Customisation Experience — Tao Zamorano
+    </title>
     <meta
       name="description"
-      content="Project page for Coca-Cola Share a Coke: the customer-facing customisation flow built with M10c in React and TypeScript." />
+      content="Case study: building React and TypeScript interfaces for Coca-Cola's Share a Coke campaign at M10c, covering market configuration, personalisation flows and purchase paths." />
     <meta name="author" content="Tao Zamorano" />
     <meta name="theme-color" content="#000000" />
     <link rel="canonical" href="https://tao.cl/work/share-a-coke/" />
 
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Tao Zamorano" />
-    <meta property="og:title" content="Coca-Cola Share a Coke — Tao Zamorano" />
+    <meta
+      property="og:title"
+      content="Building the Share a Coke Customisation Experience — Tao Zamorano" />
     <meta
       property="og:description"
-      content="Project page for Coca-Cola Share a Coke: the customer-facing customisation flow built with M10c in React and TypeScript." />
+      content="Case study: building React and TypeScript interfaces for Coca-Cola's Share a Coke campaign at M10c, covering market configuration, personalisation flows and purchase paths." />
     <meta property="og:url" content="https://tao.cl/work/share-a-coke/" />
     <meta property="og:locale" content="en_GB" />
     <meta name="twitter:card" content="summary" />
     <meta
       name="twitter:title"
-      content="Coca-Cola Share a Coke — Tao Zamorano" />
+      content="Building the Share a Coke Customisation Experience — Tao Zamorano" />
     <meta
       name="twitter:description"
-      content="Project page for Coca-Cola Share a Coke: the customer-facing customisation flow built with M10c in React and TypeScript." />
+      content="Case study: building React and TypeScript interfaces for Coca-Cola's Share a Coke campaign at M10c, covering market configuration, personalisation flows and purchase paths." />
 
     <link rel="icon" type="image/svg+xml" href="/src/img/tao.svg" />
     <link rel="stylesheet" href="/src/main.css" />
@@ -44,13 +48,81 @@
     <main class="case-study">
       <article>
         <p class="case-status">Completed campaign</p>
-        <h1>Coca-Cola Share a Coke</h1>
+        <h1>Building the Share a Coke Customisation Experience</h1>
         <p class="case-meta">
           Front-end developer at M10c · Oct 2024 - Jun 2025
         </p>
         <p class="case-lede">
-          Customer-facing customisation flow for Coca-Cola's international Share
-          a Coke campaign.
+          React and TypeScript interfaces supporting different markets,
+          personalisation flows and purchase environments.
+        </p>
+
+        <ul class="case-glance" aria-label="At a glance">
+          <li>
+            <span class="case-glance-label">React/TypeScript</span>
+            Contributed to a consumer customisation app and two internal
+            market-configuration tools.
+          </li>
+          <li>
+            <span class="case-glance-label">Configuration</span>
+            Market data drove steps, name validation and which selections
+            persisted.
+          </li>
+          <li>
+            <span class="case-glance-label">Commerce</span>
+            Basket and Stripe checkout for online orders, alongside in-store
+            journeys.
+          </li>
+        </ul>
+
+        <h2>Overview</h2>
+        <p class="case-copy">
+          Share a Coke let customers personalise a Coke can with a name or
+          message in participating markets. I was one of the front-end
+          developers at M10c on the React and TypeScript applications behind the
+          campaign. The consumer customisation experience was the largest part
+          of my work; the other two applications were internal tools for
+          configuring markets.
+        </p>
+
+        <h2>The engineering challenge</h2>
+        <p class="case-copy">
+          The customisation experience was not a single linear form. Each market
+          could define its own steps, name validation and allow-lists, and
+          whether the customer was in an in-store or out-of-store experience.
+          Online orders added a basket and Stripe checkout. Selections also
+          behaved differently between steps: some values persisted, others reset
+          as users moved between steps. Hard-coding a path per market would have
+          meant a separate flow for every variation.
+        </p>
+
+        <h2>My implementation</h2>
+        <p class="case-copy">
+          I built the personalisation forms, 2D product previews, multilingual
+          interfaces and responsive layouts. I used React hooks and lookup
+          objects, with a state-machine-like structure rather than a library:
+          market configuration decided which steps and branches applied, and
+          each step defined whether earlier data persisted or reset. The lead
+          developer reviewed the approach and modified the final
+          state-management implementation. I also built a Three.js 3D can
+          prototype, which was not shipped.
+        </p>
+
+        <h2>Delivery and collaboration</h2>
+        <p class="case-copy">
+          Work came from supplied designs and scoped requirements. I
+          collaborated with the lead developer and designer, who reviewed and
+          refined my implementations. Two dedicated testers carried out manual
+          testing.
+        </p>
+
+        <h2>Outcome and limits</h2>
+        <p class="case-copy">
+          The campaign launched internationally, with market-specific
+          experiences configured through the internal tools. I did not measure
+          conversion, performance or reach, so this page claims no commercial
+          results. The original customer page is no longer live; the screenshot
+          below is historical evidence.
         </p>
 
         <figure class="case-figure">
@@ -67,38 +139,17 @@
             height="887"
             decoding="async" />
           <figcaption class="case-caption">
-            The campaign customisation interface. As part of M10c's team, I
-            built the personalisation forms, 2D product previews, multilingual
-            UI and responsive layouts for the React/TypeScript app.
+            The campaign customisation interface as it appeared while live.
+            Historical screenshot; the original page is no longer online.
           </figcaption>
         </figure>
 
-        <h2>What I built</h2>
-        <p class="case-copy">
-          Share a Coke let customers add names and messages to cans across
-          markets. I worked as a front-end developer on M10c's team, building
-          the customer-facing customisation flow.
-        </p>
-        <ul>
-          <li>Personalisation forms for names and messages.</li>
-          <li>2D previews of the customised product.</li>
-          <li>Multilingual interfaces and responsive layouts.</li>
-        </ul>
-        <p class="case-copy">
-          The application was built in React and TypeScript. I also built a
-          Three.js 3D can prototype, which was not shipped with the campaign.
-        </p>
-
-        <h2>Status</h2>
-        <p class="case-copy">
-          The campaign has completed and the original customisation page is no
-          longer live, so this page uses the campaign screenshot held in the
-          portfolio.
-        </p>
-
         <p class="case-note">
-          This page describes the part I built on M10c's team; the campaign
+          This page describes the part I built on M10c's team. The campaign
           itself and its marks belong to Coca-Cola.
+        </p>
+        <p class="case-return">
+          <a href="/#work">← Back to selected work</a>
         </p>
       </article>
     </main>

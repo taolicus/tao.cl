@@ -249,6 +249,22 @@
     @apply text-muted border-border mt-12 border-t pt-6 text-sm;
   }
 
+  .case-study .case-glance {
+    @apply border-border text-body mt-8 grid list-none gap-4 space-y-0 border-t p-0 text-base sm:grid-cols-3;
+  }
+
+  .case-glance li {
+    @apply leading-relaxed;
+  }
+
+  .case-glance-label {
+    @apply text-brand mb-1 block text-xs font-normal tracking-[0.08em] uppercase;
+  }
+
+  .case-return {
+    @apply mt-8 text-base;
+  }
+
   /* Independent projects */
 
   #projects > div > div {

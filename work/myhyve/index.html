@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MyHyve Ticketing Portal — Tao Zamorano</title>
+    <title>Modernising the MyHyve Ticketing Portal — Tao Zamorano</title>
     <meta
       name="description"
-      content="Case study: a monthly support-ticket automation for stray orders at Hyve Managed Hosting, and the Angular 19→21 modernisation of the MyHyve portal." />
+      content="Case study: modernising a production Angular and C# ticketing portal at Hyve Managed Hosting, including the Angular 19 to 21 upgrade, dependency security and cross-stack feature work." />
     <meta name="author" content="Tao Zamorano" />
     <meta name="theme-color" content="#000000" />
     <link rel="canonical" href="https://tao.cl/work/myhyve/" />
@@ -15,19 +15,19 @@
     <meta property="og:site_name" content="Tao Zamorano" />
     <meta
       property="og:title"
-      content="MyHyve Ticketing Portal — Tao Zamorano" />
+      content="Modernising the MyHyve Ticketing Portal — Tao Zamorano" />
     <meta
       property="og:description"
-      content="Case study: a monthly support-ticket automation for stray orders at Hyve Managed Hosting, and the Angular 19→21 modernisation of the MyHyve portal." />
+      content="Case study: modernising a production Angular and C# ticketing portal at Hyve Managed Hosting, including the Angular 19 to 21 upgrade, dependency security and cross-stack feature work." />
     <meta property="og:url" content="https://tao.cl/work/myhyve/" />
     <meta property="og:locale" content="en_GB" />
     <meta name="twitter:card" content="summary" />
     <meta
       name="twitter:title"
-      content="MyHyve Ticketing Portal — Tao Zamorano" />
+      content="Modernising the MyHyve Ticketing Portal — Tao Zamorano" />
     <meta
       name="twitter:description"
-      content="Case study: a monthly support-ticket automation for stray orders at Hyve Managed Hosting, and the Angular 19→21 modernisation of the MyHyve portal." />
+      content="Case study: modernising a production Angular and C# ticketing portal at Hyve Managed Hosting, including the Angular 19 to 21 upgrade, dependency security and cross-stack feature work." />
 
     <link rel="icon" type="image/svg+xml" href="/src/img/tao.svg" />
     <link rel="stylesheet" href="/src/main.css" />
@@ -46,51 +46,130 @@
     <main class="case-study">
       <article>
         <p class="case-kicker">Case study</p>
-        <h1>MyHyve Ticketing Portal</h1>
+        <h1>Modernising the MyHyve Ticketing Portal</h1>
         <p class="case-meta">
           Mid-Level Engineer at Hyve Managed Hosting · Sep 2025 - Oct 2026
         </p>
         <p class="case-lede">
-          A monthly support-ticket automation for stray orders at Hyve Managed
-          Hosting, built into the production Angular and C# ticketing portal.
+          Angular modernisation, dependency security and cross-stack
+          improvements to a production support application.
         </p>
 
-        <h2>The problem</h2>
+        <ul class="case-glance" aria-label="At a glance">
+          <li>
+            <span class="case-glance-label">Angular</span>
+            Initiated the 19 → 21 upgrade and shipped it incrementally, without
+            a rewrite.
+          </li>
+          <li>
+            <span class="case-glance-label">Security</span>
+            Cut npm audit findings from 50+ to under 5, resolving three of four
+            critical issues.
+          </li>
+          <li>
+            <span class="case-glance-label">Cross-stack</span>
+            Shipped a support notification preference across Angular, C# and
+            SQL.
+          </li>
+        </ul>
+
+        <h2>Modernising Angular 19 → 21</h2>
         <p class="case-copy">
-          Stray orders needed a monthly check to become support tickets. Some
-          maintenance tasks were recorded under the wrong category, so the team
-          did not see them as maintenance work.
+          MyHyve is Hyve's existing Angular and C# ticketing portal. I worked on
+          it within the engineering team; this page covers what I initiated or
+          delivered. It was on Angular 19, but its patterns lagged behind the
+          framework: vulnerabilities kept appearing, and components mixed data
+          access, business rules and presentation. I proposed the upgrade to 21
+          and implemented it, researching migration paths and package
+          compatibility, then shipping it in steps that kept the application
+          deployable.
+        </p>
+        <p class="case-copy">The changes that shipped:</p>
+        <ul>
+          <li>
+            Angular signals and rxResource in place of manual subscription state
+            and nested observable chains.
+          </li>
+          <li>
+            Modern template syntax and OnPush change detection in components
+            that could support it.
+          </li>
+          <li>
+            API and business logic moved out of large components into services.
+          </li>
+          <li>
+            Related components grouped into feature-oriented directories, with
+            legacy Sass replaced by Tailwind CSS.
+          </li>
+        </ul>
+        <p class="case-copy">
+          OnPush and signals make change detection predictable, services give
+          data access one owner, and feature directories show what a change
+          affects. Most proposed structural changes reached production.
         </p>
 
-        <h2>What I built</h2>
+        <h2>Dependency security</h2>
         <p class="case-copy">
-          I built and deployed the workflow across the Angular portal and its C#
-          backend. On each monthly run it checks for stray orders, creates a
-          ticket for each one and sends the ticket to support review. Customer
-          Experience validated the workflow after rollout.
+          The audit reported more than 50 findings, four critical. I traced
+          vulnerable packages to their transitive dependencies, checked versions
+          against Angular's peer requirements, and added npm overrides. I
+          preserved the shrinkwrap file the deployment depends on and verified
+          the overrides worked with it. That left fewer than five findings, with
+          three of the four critical issues resolved. The rest stayed open; the
+          portal is not vulnerability-free.
+        </p>
+
+        <h2>Production example: notification preferences</h2>
+        <p class="case-copy">
+          After consulting support engineers, I proposed a role-sensitive
+          notification setting so people could choose which ticket notifications
+          they received. I built the Angular toggle and state, extended the API
+          request and C# endpoint, and changed the SQL schema and query,
+          checking the approach with a backend developer. It shipped with
+          positive feedback from support. The work was outside my frontend
+          specialisation, so I followed existing backend conventions.
+        </p>
+
+        <h2>Production example: error monitoring</h2>
+        <p class="case-copy">
+          Sentry reported recurring HTTP 400 responses. Some were expected
+          client-side errors, not faults, but the frontend treated them as
+          failures and reported them. I changed the handling to distinguish the
+          two, reducing monitoring noise so the remaining reports were more
+          useful.
+        </p>
+
+        <h2>Supporting example: monthly ticket automation</h2>
+        <p class="case-copy">
+          An existing automated process misclassified some VM patching orders,
+          so maintenance work went unseen. With Support and Customer Experience,
+          I investigated the cases and agreed a simpler approach: one monthly
+          ticket aggregating the affected orders. I used an AI coding agent for
+          the focused classification patch and submitted it for review;
+          colleagues verified and deployed it.
         </p>
 
         <figure
           class="workflow case-workflow"
           aria-labelledby="case-workflow-title">
           <figcaption id="case-workflow-title" class="workflow-title">
-            Monthly stray-order workflow
+            Monthly aggregation workflow
           </figcaption>
           <ol class="workflow-steps">
             <li class="workflow-step">
               <p class="workflow-step-label">1. Monthly check</p>
-              <p>Stray order #1042</p>
-              <p>Sample customer</p>
+              <p>Patching orders reviewed</p>
+              <p>Misclassified work identified</p>
             </li>
             <li class="workflow-step">
-              <p class="workflow-step-label">2. Ticket creation</p>
-              <p>Ticket #1042 created</p>
-              <p>Queued for support</p>
+              <p class="workflow-step-label">2. One monthly ticket</p>
+              <p>Affected orders grouped</p>
+              <p>Single ticket raised</p>
             </li>
             <li class="workflow-step">
               <p class="workflow-step-label">3. Support review</p>
-              <p>Stray order reviewed</p>
-              <p>Maintenance task flagged</p>
+              <p>Maintenance work confirmed</p>
+              <p>Follow-up scheduled</p>
             </li>
           </ol>
           <p class="workflow-note">
@@ -98,26 +177,28 @@
           </p>
         </figure>
 
-        <h2>After rollout</h2>
+        <h2>Engineering approach</h2>
         <p class="case-copy">
-          The workflow surfaced maintenance work the team had been missing. It
-          also gives each stray order a repeatable route into a support ticket
-          and a support-review step.
+          Changes went through small GitLab merge requests and colleague review,
+          with manual regression testing. I also prototyped a separate
+          Playwright component-testing build for basic UI components outside the
+          authentication flow; coverage stayed partial.
         </p>
 
-        <h2>Separate example: modernising the portal</h2>
+        <h2>Outcome</h2>
         <p class="case-copy">
-          The monthly workflow sat alongside a wider modernisation of the same
-          portal. I led the Angular 19→21 upgrade and cut npm audit findings
-          from 50+ to under 5, including three of four critical issues. The
-          portal adopted Angular signals and rxResource, and I replaced legacy
-          Sass with Tailwind. I also reorganised related components into
-          feature-oriented modules.
+          The portal now runs on Angular 21 with fewer than five audit findings.
+          Notification preferences and the error-handling change are in
+          production, and the monthly patch was deployed after review. No usage
+          or performance metrics were recorded.
         </p>
 
         <p class="case-note">
           This case study uses only details that can be stated without internal
           customer, order or ticket data.
+        </p>
+        <p class="case-return">
+          <a href="/#work">← Back to selected work</a>
         </p>
       </article>
     </main>
