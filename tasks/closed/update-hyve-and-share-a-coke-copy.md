@@ -36,5 +36,18 @@ delivered engineering work and keeps the security wording qualitative.
 
 ## Outcome
 
-Filled in when the task is closed: what was done, what was verified, what was
-not, and what remains.
+Replaced the homepage cards and both case studies with the supplied copy,
+updated page metadata and social-preview descriptions, removed the obsolete
+MyHyve workflow diagram and its unused styles, and aligned the Playwright checks
+and feature notes. Updated the commercial-details issue so it records only the
+public-level evidence.
+
+Verified with `npm run build`, `npm test` (25 passed, external-link check
+skipped) and `sh workflow/lint.sh`. Reviewed the homepage and both case studies
+at 1440px and 390px with no horizontal overflow. Deployed with
+`sh scripts/deploy.sh` and confirmed the live pages, metadata and screenshot
+caption match the supplied copy.
+
+The repository's older history and closed task records still contain pre-change
+wording; removing that from public GitHub history is the separate follow-up
+rewrite.
