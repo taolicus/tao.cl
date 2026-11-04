@@ -41,6 +41,10 @@ rm -rf "$ORIG_DIR/dist"
 cp -r dist "$ORIG_DIR/"
 cd "$ORIG_DIR"
 
+# The build inherits the local umask, which can leave files unreadable by the
+# web server; rsync -a and scp would copy those modes to the server.
+chmod -R a+rX dist
+
 sh workflow/lint.sh
 git push
 
