@@ -57,34 +57,47 @@ test("homepage cards link to both project pages", async ({ page }) => {
   ).toHaveAttribute("href", "./work/share-a-coke/");
 });
 
-test("MyHyve workflow diagram names its three steps", async ({ page }) => {
+test("MyHyve case study describes the modernisation work", async ({ page }) => {
   await page.goto("/work/myhyve/");
 
-  const steps = page.locator(".case-workflow .workflow-step-label");
-  await expect(steps).toHaveText([
-    "1. Monthly check",
-    "2. One monthly ticket",
-    "3. Support review",
-  ]);
-  await expect(
-    page.getByText("Illustrative workflow with fictional data."),
-  ).toBeVisible();
+  await expect(page.locator(".case-study")).toContainText(
+    "I initiated and implemented the upgrade from Angular 19 to 21 in stages.",
+  );
+  await expect(page.locator(".case-study")).toContainText(
+    "I consulted support engineers before implementing the preference across the Angular interface, C# API and SQL database.",
+  );
+  await expect(page.locator(".case-study")).toContainText(
+    "I used Sentry to investigate recurring reports",
+  );
 });
 
 for (const projectPage of PAGES) {
-  test(`${projectPage.heading} shows highlights and a return link`, async ({
+  test(`${projectPage.heading} links back to selected work`, async ({
     page,
   }) => {
     await page.goto(projectPage.path);
 
     await expect(
-      page.getByRole("list", { name: "At a glance" }).locator("li"),
-    ).toHaveCount(3);
-    await expect(
       page.getByRole("link", { name: "← Back to selected work" }),
     ).toHaveAttribute("href", "/#work");
   });
 }
+
+test("Share a Coke case study describes the customisation work", async ({
+  page,
+}) => {
+  await page.goto("/work/share-a-coke/");
+
+  await expect(page.locator(".case-study")).toContainText(
+    "I built React and TypeScript components for three applications supporting Coca-Cola’s international Share a Coke campaign.",
+  );
+  await expect(page.locator(".case-study")).toContainText(
+    "I used React hooks and lookup objects to control which steps appeared",
+  );
+  await expect(page.locator(".case-study")).toContainText(
+    "The lead developer reviewed and refined the state logic, and dedicated testers checked the flows manually before launch.",
+  );
+});
 
 test("Share a Coke campaign screenshot loads at project-page width", async ({
   page,
@@ -94,6 +107,9 @@ test("Share a Coke campaign screenshot loads at project-page width", async ({
 
   const image = page.locator(".case-figure img");
   await expect(image).toBeVisible();
+  await expect(
+    page.getByText("Screenshot from the original Share a Coke campaign."),
+  ).toBeVisible();
 
   const loaded = await image.evaluate(
     (element) => element.complete && element.naturalWidth > 0,

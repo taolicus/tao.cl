@@ -6,7 +6,7 @@
     <title>Modernising the MyHyve Ticketing Portal — Tao Zamorano</title>
     <meta
       name="description"
-      content="Case study: modernising a production Angular and C# ticketing portal at Hyve Managed Hosting, including the Angular 19 to 21 upgrade, dependency security and cross-stack feature work." />
+      content="Case study: upgrading a production Angular support portal from version 19 to 21, resolving dependency security findings and building a ticket notification preference across Angular, C# and SQL." />
     <meta name="author" content="Tao Zamorano" />
     <meta name="theme-color" content="#000000" />
     <link rel="canonical" href="https://tao.cl/work/myhyve/" />
@@ -18,7 +18,7 @@
       content="Modernising the MyHyve Ticketing Portal — Tao Zamorano" />
     <meta
       property="og:description"
-      content="Case study: modernising a production Angular and C# ticketing portal at Hyve Managed Hosting, including the Angular 19 to 21 upgrade, dependency security and cross-stack feature work." />
+      content="Case study: upgrading a production Angular support portal from version 19 to 21, resolving dependency security findings and building a ticket notification preference across Angular, C# and SQL." />
     <meta property="og:url" content="https://tao.cl/work/myhyve/" />
     <meta property="og:locale" content="en_GB" />
     <meta name="twitter:card" content="summary" />
@@ -27,7 +27,7 @@
       content="Modernising the MyHyve Ticketing Portal — Tao Zamorano" />
     <meta
       name="twitter:description"
-      content="Case study: modernising a production Angular and C# ticketing portal at Hyve Managed Hosting, including the Angular 19 to 21 upgrade, dependency security and cross-stack feature work." />
+      content="Case study: upgrading a production Angular support portal from version 19 to 21, resolving dependency security findings and building a ticket notification preference across Angular, C# and SQL." />
 
     <link rel="icon" type="image/svg+xml" href="/src/img/tao.svg" />
     <link rel="stylesheet" href="/src/main.css" />
@@ -51,152 +51,35 @@
           Mid-Level Engineer at Hyve Managed Hosting · Sep 2025 - Oct 2026
         </p>
         <p class="case-lede">
-          Angular modernisation, dependency security and cross-stack
-          improvements to a production support application.
+          I worked on a production support portal at Hyve Managed Hosting. My
+          work included upgrading Angular, simplifying how the application
+          handled data and building features used by the support team.
         </p>
 
-        <ul class="case-glance" aria-label="At a glance">
-          <li>
-            <span class="case-glance-label">Angular</span>
-            Initiated the 19 → 21 upgrade and shipped it incrementally, without
-            a rewrite.
-          </li>
-          <li>
-            <span class="case-glance-label">Security</span>
-            Cut npm audit findings from 50+ to under 5, resolving three of four
-            critical issues.
-          </li>
-          <li>
-            <span class="case-glance-label">Cross-stack</span>
-            Shipped a support notification preference across Angular, C# and
-            SQL.
-          </li>
-        </ul>
-
-        <h2>Modernising Angular 19 → 21</h2>
+        <h2>Upgrading Angular</h2>
         <p class="case-copy">
-          MyHyve is Hyve's existing Angular and C# ticketing portal. I worked on
-          it within the engineering team; this page covers what I initiated or
-          delivered. It was on Angular 19, but its patterns lagged behind the
-          framework: vulnerabilities kept appearing, and components mixed data
-          access, business rules and presentation. I proposed the upgrade to 21
-          and implemented it, researching migration paths and package
-          compatibility, then shipping it in steps that kept the application
-          deployable.
+          I initiated and implemented the upgrade from Angular 19 to 21 in
+          stages. I used signals and <code>rxResource</code> to simplify state
+          and data fetching, and moved API and business logic out of large
+          components into services. I resolved dependency security findings and
+          kept the application compatible with the existing deployment process.
         </p>
-        <p class="case-copy">The changes that shipped:</p>
-        <ul>
-          <li>
-            Angular signals and rxResource in place of manual subscription state
-            and nested observable chains.
-          </li>
-          <li>
-            Modern template syntax and OnPush change detection in components
-            that could support it.
-          </li>
-          <li>
-            API and business logic moved out of large components into services.
-          </li>
-          <li>
-            Related components grouped into feature-oriented directories, with
-            legacy Sass replaced by Tailwind CSS.
-          </li>
-        </ul>
+
+        <h2>Building a ticket notification preference</h2>
         <p class="case-copy">
-          OnPush and signals make change detection predictable, services give
-          data access one owner, and feature directories show what a change
-          affects. Most proposed structural changes reached production.
+          I consulted support engineers before implementing the preference
+          across the Angular interface, C# API and SQL database. The feature
+          went live and received positive feedback from the support team.
         </p>
 
-        <h2>Dependency security</h2>
+        <h2>Improving production error reporting</h2>
         <p class="case-copy">
-          The audit reported more than 50 findings, four critical. I traced
-          vulnerable packages to their transitive dependencies, checked versions
-          against Angular's peer requirements, and added npm overrides. I
-          preserved the shrinkwrap file the deployment depends on and verified
-          the overrides worked with it. That left fewer than five findings, with
-          three of the four critical issues resolved. The rest stayed open; the
-          portal is not vulnerability-free.
+          I used Sentry to investigate recurring reports and updated the
+          frontend to handle expected errors without reporting them as
+          unexpected failures. That made the remaining reports easier to
+          investigate.
         </p>
 
-        <h2>Production example: notification preferences</h2>
-        <p class="case-copy">
-          After consulting support engineers, I proposed a role-sensitive
-          notification setting so people could choose which ticket notifications
-          they received. I built the Angular toggle and state, extended the API
-          request and C# endpoint, and changed the SQL schema and query,
-          checking the approach with a backend developer. It shipped with
-          positive feedback from support. The work was outside my frontend
-          specialisation, so I followed existing backend conventions.
-        </p>
-
-        <h2>Production example: error monitoring</h2>
-        <p class="case-copy">
-          Sentry reported recurring HTTP 400 responses. Some were expected
-          client-side errors, not faults, but the frontend treated them as
-          failures and reported them. I changed the handling to distinguish the
-          two, reducing monitoring noise so the remaining reports were more
-          useful.
-        </p>
-
-        <h2>Supporting example: monthly ticket automation</h2>
-        <p class="case-copy">
-          An existing automated process misclassified some VM patching orders,
-          so maintenance work went unseen. With Support and Customer Experience,
-          I investigated the cases and agreed a simpler approach: one monthly
-          ticket aggregating the affected orders. I used an AI coding agent for
-          the focused classification patch and submitted it for review;
-          colleagues verified and deployed it.
-        </p>
-
-        <figure
-          class="workflow case-workflow"
-          aria-labelledby="case-workflow-title">
-          <figcaption id="case-workflow-title" class="workflow-title">
-            Monthly aggregation workflow
-          </figcaption>
-          <ol class="workflow-steps">
-            <li class="workflow-step">
-              <p class="workflow-step-label">1. Monthly check</p>
-              <p>Patching orders reviewed</p>
-              <p>Misclassified work identified</p>
-            </li>
-            <li class="workflow-step">
-              <p class="workflow-step-label">2. One monthly ticket</p>
-              <p>Affected orders grouped</p>
-              <p>Single ticket raised</p>
-            </li>
-            <li class="workflow-step">
-              <p class="workflow-step-label">3. Support review</p>
-              <p>Maintenance work confirmed</p>
-              <p>Follow-up scheduled</p>
-            </li>
-          </ol>
-          <p class="workflow-note">
-            Illustrative workflow with fictional data.
-          </p>
-        </figure>
-
-        <h2>Engineering approach</h2>
-        <p class="case-copy">
-          Changes went through small GitLab merge requests and colleague review,
-          with manual regression testing. I also prototyped a separate
-          Playwright component-testing build for basic UI components outside the
-          authentication flow; coverage stayed partial.
-        </p>
-
-        <h2>Outcome</h2>
-        <p class="case-copy">
-          The portal now runs on Angular 21 with fewer than five audit findings.
-          Notification preferences and the error-handling change are in
-          production, and the monthly patch was deployed after review. No usage
-          or performance metrics were recorded.
-        </p>
-
-        <p class="case-note">
-          This case study uses only details that can be stated without internal
-          customer, order or ticket data.
-        </p>
         <p class="case-return">
           <a href="/#work">← Back to selected work</a>
         </p>

@@ -138,44 +138,10 @@
       align-items: start;
       gap: 2rem;
     }
-  }
 
-  /* Workflow diagram */
-
-  .workflow {
-    @apply border-border-subtle rounded-2xl border p-5 text-left;
-  }
-
-  .workflow-title {
-    @apply text-body text-sm font-normal tracking-[0.12em] uppercase;
-  }
-
-  .workflow-steps {
-    @apply mt-4 grid list-none gap-3 p-0;
-  }
-
-  .case-workflow .workflow-steps {
-    @apply sm:grid-cols-3;
-  }
-
-  .workflow-step {
-    @apply border-border-subtle bg-foreground/5 rounded-xl border p-4;
-  }
-
-  .workflow-step-label {
-    @apply text-brand mb-2 text-sm font-normal tracking-[0.08em] uppercase;
-  }
-
-  .workflow-step p {
-    @apply text-body text-sm leading-relaxed;
-  }
-
-  .workflow-step p + p {
-    @apply mt-1;
-  }
-
-  .workflow-note {
-    @apply text-muted mt-4 text-xs;
+    .work-item--text {
+      grid-template-columns: minmax(0, 1fr);
+    }
   }
 
   /* Project pages */
@@ -239,26 +205,6 @@
 
   .case-caption {
     @apply text-muted mt-4 text-sm leading-relaxed;
-  }
-
-  .case-workflow {
-    @apply mt-10;
-  }
-
-  .case-note {
-    @apply text-muted border-border mt-12 border-t pt-6 text-sm;
-  }
-
-  .case-study .case-glance {
-    @apply border-border text-body mt-8 grid list-none gap-4 space-y-0 border-t p-0 text-base sm:grid-cols-3;
-  }
-
-  .case-glance li {
-    @apply leading-relaxed;
-  }
-
-  .case-glance-label {
-    @apply text-brand mb-1 block text-xs font-normal tracking-[0.08em] uppercase;
   }
 
   .case-return {

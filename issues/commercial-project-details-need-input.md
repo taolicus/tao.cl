@@ -13,12 +13,11 @@ products and Tao's team/role, not individual outcomes or metrics.
 First-hand contribution evidence has been added for:
 
 - **Hyve Managed Hosting / MyHyve** — Angular/C# ticketing portal maintenance
-  and modernisation, Angular v19→v21 upgrade, npm audit reduction, signals,
-  rxResource, Tailwind CSS, feature-oriented code organisation and the recurring
-  monthly ticket workflow.
+  and modernisation, the Angular v19→v21 upgrade, signals, rxResource, dependency
+  security work and a ticket notification preference across Angular, C# and SQL.
 - **Coca-Cola Share a Coke (M10c)** — React/TypeScript frontend development,
-  personalisation forms, 2D previews, multilingual interfaces, responsive
-  layouts and an unshipped Three.js prototype.
+  a can customisation flow adapted to local validation rules, personalisation
+  forms, 2D previews, multilingual interfaces and responsive layouts.
 - **DataFlow — IBM DataPower Monitoring** — Independently designed, built and
   deployed an Ionic mobile monitoring app integrated with IBM DataPower,
   iterated based on user/colleague feedback.
@@ -28,9 +27,8 @@ First-hand contribution evidence has been added for:
 The MyHyve and Share a Coke project pages use only the evidence recorded above.
 Details that are still not established:
 
-- **MyHyve** — the exact rollout date, the number of stray orders or tickets
-  handled, the precise support-review steps, and which C# components changed.
-  The workflow diagram is illustrative and uses fictional data.
+- **MyHyve** — the exact rollout date, the number of orders or tickets affected
+  by any given process, and which C# components changed.
 - **Coca-Cola Share a Coke** — campaign dates beyond the M10c role dates, the
   markets covered, and a working live or archived URL. The project page uses
   the existing campaign screenshot and the contribution details above; the

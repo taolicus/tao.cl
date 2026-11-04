@@ -26,37 +26,30 @@ development and the static production build.
 generated. The shared project-page classes are in the components layer:
 
 - `.case-header`, `.case-back`, `.case-nav`, `.case-study`, `.case-kicker`,
-  `.case-status`, `.case-meta`, `.case-lede`, `.case-glance`,
-  `.case-glance-label`, `.case-copy`, `.case-figure`, `.case-caption`,
-  `.case-workflow`, `.case-return` and `.case-note`.
-- `.workflow`, `.workflow-title`, `.workflow-steps`, `.workflow-step`,
-  `.workflow-step-label` and `.workflow-note` render the accessible three-step
-  diagram used on the MyHyve card and case study.
+  `.case-status`, `.case-meta`, `.case-lede`, `.case-copy`, `.case-figure`,
+  `.case-caption` and `.case-return`.
 
-`.case-glance` is a three-column list of technical highlights directly below
-the page lede. `.case-return` repeats the Selected work link at the end of a
-case study so a reader does not have to scroll back to the header.
+`.case-return` repeats the Selected work link at the end of a case study so a
+reader does not have to scroll back to the header.
 
 The hero header rules still target `header`; `.case-header` overrides the
 full-height flex layout for project pages without changing the homepage.
 
 ## Content rules
 
-The project pages use only the contribution evidence recorded in
-`issues/commercial-project-details-need-input.md` and the closed tasks that
-added it. The MyHyve diagram uses fictional ticket data and omits internal
-details. Do not add metrics, customer data or implementation specifics that are
-not backed by that evidence.
+The project pages use only contribution evidence confirmed by Tao. Do not add
+metrics, customer data or implementation specifics that are not backed by that
+evidence.
 
-Both pages use the same case-study shape: title and one-sentence summary, role
-and dates, three "At a glance" highlights, then engineering problem,
-contribution, outcome and limitations. The MyHyve page leads with the Angular
-modernisation and dependency-security work; the monthly ticket automation is a
-supporting example. The Share a Coke page leads with the market-configuration
-and step-transition problem; the campaign's commercial results are explicitly
-outside the page's claims.
+Both pages use the same case-study shape: title, role and dates, an opening
+paragraph, then two or three short sections describing the work. The homepage
+cards summarise the same achievements. The MyHyve card and page use qualitative
+security wording and do not publish audit counts, severity breakdowns,
+unresolved findings or dependency details. The Share a Coke page keeps
+commercial implementation details out of the public copy and uses the campaign
+screenshot only as historical evidence with its supplied caption.
 
 Team work is stated as team work. The MyHyve page does not claim that Tao
-verified or deployed the monthly ticket patch, and the Share a Coke page does
+verified or deployed work owned by colleagues, and the Share a Coke page does
 not claim that he designed the application architecture or owned the campaign's
 reach.
