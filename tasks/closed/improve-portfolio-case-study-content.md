@@ -63,3 +63,7 @@ first desktop viewport.
 Tao confirmed the facts retained from earlier published content: the Tailwind
 replacement of Sass, the portal running on Angular 21, the npm audit figures and
 the market-configuration statement on the Share a Coke page.
+
+Deployed with `sh scripts/deploy.sh` after rebasing onto two upstream commits.
+The live MyHyve, Share a Coke and homepage content was checked at tao.cl, with
+the new stylesheet loaded and no console errors.
