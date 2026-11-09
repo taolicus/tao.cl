@@ -59,10 +59,24 @@ why `#intro h1` and `#home h1` used to disagree: the unlayered one always won.
 
 ## Viewport units
 
-`header` and `#logo-container` use `svh`, not `vh`, so the full-height block
-matches the visible area when mobile browser chrome is showing. `#logo-container`
-keeps `w-screen` because it sets the flex base size that produces the current
-logo composition; `w-full` shifts the clip edge by 4px.
+`header` uses `svh`, not `vh`, so the full-height block matches the visible area
+when mobile browser chrome is showing. `#tao` keeps the full-height `svh` size
+and is positioned around the hero rather than taking part in its flow.
+
+In portrait the hero is a two-row grid. The first row reserves at least `34svh`
+for the logo and the second row holds `#intro`; when the copy is taller than the
+viewport the header grows to fit instead of pushing the text up over the logo.
+
+## Text autosizing
+
+Tailwind's preflight sets only `-webkit-text-size-adjust: 100%`. Firefox Android
+does not use that prefix for text inflation, so it can enlarge the hero copy
+while Chrome leaves it alone. `html` therefore sets both the prefixed and
+unprefixed `text-size-adjust: 100%`.
+
+Do not add `user-scalable=no` or `maximum-scale` to the viewport tag to control
+text size; they block pinch zoom. The viewport stays `width=device-width,
+initial-scale=1.0`.
 
 ## Reflow
 
@@ -70,6 +84,11 @@ The page must not scroll horizontally at 320px. Centred flex columns size their
 children to max-content, so a long unbreakable string needs a constrained parent
 (`max-w-full`) before `break-words` can do anything. `.contact-primary` is the
 case that taught us this.
+
+The rotating `#tao` logo extends past the right edge at every width. `body`
+alone cannot keep the document scroll width at the viewport, so `html` uses
+`overflow-x: clip`. Unlike `hidden`, the root clip does not stop vertical
+scrolling.
 
 ## Breakpoints
 

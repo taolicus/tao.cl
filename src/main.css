@@ -22,6 +22,9 @@
 @layer base {
   html {
     @apply bg-surface min-h-screen scroll-smooth;
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {
@@ -366,7 +369,8 @@
 
   @media (orientation: portrait) {
     header {
-      @apply flex-col overflow-hidden;
+      @apply grid h-auto min-h-svh overflow-hidden;
+      grid-template-rows: minmax(34svh, 1fr) auto;
     }
 
     #tao {
@@ -376,7 +380,8 @@
     }
 
     #intro {
-      @apply order-2 w-full flex-1 justify-end;
+      @apply w-full justify-end;
+      grid-row: 2;
     }
 
     #intro h1 {

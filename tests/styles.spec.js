@@ -3,10 +3,12 @@ import { test, expect } from "@playwright/test";
 const VIEWPORTS = [
   { name: "320px", width: 320, height: 568 },
   { name: "375px", width: 375, height: 667 },
+  { name: "390px", width: 390, height: 844 },
+  { name: "412px", width: 412, height: 915 },
   { name: "1440px", width: 1440, height: 900 },
 ];
 
-const LANDSCAPE_PHONE = { width: 667, height: 375 };
+const PORTRAIT_PHONES = VIEWPORTS.slice(0, 4);
 
 async function openAt(page, viewport) {
   await page.setViewportSize({
@@ -61,22 +63,77 @@ for (const viewport of VIEWPORTS) {
 
 test("hero heading keeps its responsive scale", async ({ page }) => {
   await openAt(page, { width: 1440, height: 900 });
-  await expect(page.locator("#intro h1")).toHaveCSS("font-size", "128px");
+  await expect(page.locator("#intro h1")).toHaveCSS("font-size", "72px");
 
   await openAt(page, VIEWPORTS[1]);
   await expect(page.locator("#intro h1")).toHaveCSS("font-size", "60px");
 });
 
-test("logo container stays inside the header", async ({ page }) => {
-  await openAt(page, LANDSCAPE_PHONE);
+test("text autosizing is disabled without blocking zoom", async ({
+  page,
+  request,
+}) => {
+  await page.goto("/");
 
-  const header = await page.locator("header").boundingBox();
-  const logo = await page.locator("#logo-container").boundingBox();
+  const href = await page
+    .locator('link[rel="stylesheet"]')
+    .getAttribute("href");
+  expect(href).not.toBeNull();
 
-  expect(logo.y + logo.height).toBeLessThanOrEqual(
-    header.y + header.height + 1,
-  );
+  const response = await request.get(new URL(href, page.url()).href);
+  const css = (await response.text()).replace(/\s+/g, "");
+  const viewport =
+    (await page.locator('meta[name="viewport"]').getAttribute("content")) ?? "";
+
+  expect(/(^|[^-])text-size-adjust:100%/.test(css)).toBe(true);
+  expect(/-webkit-text-size-adjust:100%/.test(css)).toBe(true);
+  expect(viewport).toContain("width=device-width");
+  expect(viewport).toContain("initial-scale=1");
+  expect(viewport).not.toContain("user-scalable=no");
+  expect(viewport).not.toContain("maximum-scale");
 });
+
+for (const viewport of PORTRAIT_PHONES) {
+  test(`portrait hero text clears the logo at ${viewport.name}`, async ({
+    page,
+  }) => {
+    await openAt(page, viewport);
+
+    const geometry = await page.evaluate(() => {
+      const box = (selector) => {
+        const element = document.querySelector(selector);
+        if (!element) throw new Error(`Missing ${selector}`);
+        const rect = element.getBoundingClientRect();
+        return { top: rect.top, bottom: rect.bottom };
+      };
+
+      const header = document.querySelector("header");
+      if (!header) throw new Error("Missing header");
+
+      return {
+        header: box("header"),
+        intro: box("#intro"),
+        heading: box("#intro h1"),
+        nav: box(".site-nav"),
+        firstRow: parseFloat(
+          getComputedStyle(header).gridTemplateRows.split(/\s+/)[0],
+        ),
+      };
+    });
+
+    // The first grid row reserves the logo's space, so the intro must start
+    // below it, and the whole hero must stay inside the grown header.
+    expect(geometry.intro.top - geometry.header.top).toBeGreaterThanOrEqual(
+      geometry.firstRow - 1,
+    );
+    expect(geometry.heading.top).toBeGreaterThanOrEqual(
+      geometry.header.top - 0.5,
+    );
+    expect(geometry.nav.bottom).toBeLessThanOrEqual(
+      geometry.header.bottom + 0.5,
+    );
+  });
+}
 
 async function computedColor(page, selector) {
   const css = await page
