@@ -61,13 +61,13 @@ test("MyHyve case study describes the modernisation work", async ({ page }) => {
   await page.goto("/work/myhyve/");
 
   await expect(page.locator(".case-study")).toContainText(
-    "I initiated and implemented the upgrade from Angular 19 to 21 in stages.",
+    "I initiated and implemented the upgrade from Angular 19 to 21 in stages",
   );
   await expect(page.locator(".case-study")).toContainText(
-    "I consulted support engineers before implementing the preference across the Angular interface, C# API and SQL database.",
+    "I consulted support engineers before implementing a ticket notification preference across the Angular interface, C# API and SQL database.",
   );
   await expect(page.locator(".case-study")).toContainText(
-    "I used Sentry to investigate recurring reports",
+    "Recurring Sentry reports included expected errors being reported as unexpected failures.",
   );
 });
 
@@ -92,10 +92,10 @@ test("Share a Coke case study describes the customisation work", async ({
     "I built React and TypeScript components for three applications supporting Coca-Cola’s international Share a Coke campaign.",
   );
   await expect(page.locator(".case-study")).toContainText(
-    "I used React hooks and lookup objects to control which steps appeared",
+    "I implemented this behaviour using React hooks and lookup objects.",
   );
   await expect(page.locator(".case-study")).toContainText(
-    "The lead developer reviewed and refined the state logic, and dedicated testers checked the flows manually before launch.",
+    "The lead developer reviewed and refined the state logic, and dedicated testers manually checked the flows before launch.",
   );
 });
 
@@ -108,7 +108,9 @@ test("Share a Coke campaign screenshot loads at project-page width", async ({
   const image = page.locator(".case-figure img");
   await expect(image).toBeVisible();
   await expect(
-    page.getByText("Screenshot from the original Share a Coke campaign."),
+    page.getByText(
+      "The original Share a Coke customisation interface, showing the personalisation form and 2D can preview I built.",
+    ),
   ).toBeVisible();
 
   const loaded = await image.evaluate(

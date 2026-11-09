@@ -42,8 +42,10 @@ metrics, customer data or implementation specifics that are not backed by that
 evidence.
 
 Both pages use the same case-study shape: title, role and dates, an opening
-paragraph, then two or three short sections describing the work. The homepage
-cards summarise the same achievements. The MyHyve card and page use qualitative
+paragraph, then two or three short sections describing the work. The Share a
+Coke page closes with a Delivery section that dates the campaign and introduces
+the screenshot as historical evidence. The homepage cards summarise the same
+achievements. The MyHyve card and page use qualitative
 security wording and do not publish audit counts, severity breakdowns,
 unresolved findings or dependency details. The Share a Coke page keeps
 commercial implementation details out of the public copy and uses the campaign
