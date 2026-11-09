@@ -25,7 +25,7 @@
   }
 
   body {
-    @apply bg-surface text-foreground min-h-screen text-center font-extralight text-balance;
+    @apply bg-surface text-foreground min-h-screen w-svw overflow-x-hidden text-center font-extralight text-balance;
   }
 
   a {
@@ -352,38 +352,31 @@
   }
 
   #intro {
-    @apply flex flex-col items-start justify-center gap-4 p-8 text-left text-2xl leading-9;
+    @apply z-10 flex flex-col items-start justify-center gap-4 p-8 text-left text-2xl leading-9;
 
     h1 {
-      @apply text-brand text-9xl;
+      @apply text-brand text-7xl;
     }
   }
 
-  #logo-container {
-    @apply relative flex h-svh w-screen justify-end overflow-clip;
-  }
-
   #tao {
-    @apply absolute top-0 h-svh w-auto max-w-none;
+    @apply absolute top-0 right-0 z-0 h-svh w-auto max-w-none;
+    /* transform: translateX(calc(100vw * 2 / 3)); */
   }
 
   @media (orientation: portrait) {
     header {
-      @apply flex-col;
-    }
-
-    #logo-container {
-      @apply h-[50svh] w-full grow;
+      @apply flex-col overflow-hidden;
     }
 
     #tao {
-      @apply top-0 left-1/2 h-auto w-full max-w-none scale-110;
+      @apply -top-1/8 -right-1/2 h-auto w-full max-w-none scale-110;
       transform-origin: center;
       animation: spin-portrait 60s linear infinite reverse;
     }
 
     #intro {
-      @apply order-2 w-full flex-1 justify-start;
+      @apply order-2 w-full flex-1 justify-end;
     }
 
     #intro h1 {
@@ -410,8 +403,11 @@
       animation: spin-landscape 60s linear infinite reverse;
     }
 
-    #intro h1 {
-      transform: translateX(-0.6rem);
+    #intro {
+      @apply max-w-1/2;
+      h1 {
+        transform: translateX(-0.6rem);
+      }
     }
   }
 
